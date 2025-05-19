@@ -47,7 +47,7 @@
           <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
             <tr>
               <td bgcolor="#00579d" style="background:#00579d; padding:0 0 12px 4%; width:180px;" valign="bottom">
-                <img src="https://doimspp.sharepoint.com/:u:/s/MCFWCOYakimaSub-Office/EWh0dty67h1PpPs7fO9kmjkBiGc6tQYhxMFBcCSRduUZpQ?download=1" alt="USFWS representative" width="180" style="display:block;border:0;width:100%;height:auto;">
+                <img src="https://raw.githubusercontent.com/Conman515/Newsletter/main/USFWS%20rep%20image.jpg.webp" alt="USFWS representative" width="180" style="display:block;border:0;width:100%;height:auto;">
               </td>
               <td bgcolor="#00579d" style="background:#00579d; padding:60px 4%;" align="center" valign="bottom">
                 <h1 style="font-size:44px;line-height:50px;font-weight:700;letter-spacing:0.6px;color:#ffffff;margin:0;">
@@ -65,12 +65,12 @@
 
     <!-- Cle elum netting -->
     <table role="presentation" width="100%" class="card"><tr>
-      <td class="imgCol"><img src="https://doimspp.sharepoint.com/:i:/s/MCFWCOYakimaSub-Office/EUS5J_A9ofhBmB1DPhngw2kBVEss_n-rfX408xgBxArY2A?download=1" alt="Cle Elum netting"></td>
+      <td class="imgCol"><img src="https://raw.githubusercontent.com/Conman515/Newsletter/main/CleElumNetting.JPG" alt="Cle Elum netting"></td>
       <td class="txtCol pad">
         <h2 style="text-align:center;">Cle Elum Netting</h2>
         <p class="subhead">60,000 SOCKEYE SMOLTS and counting</p>
         <p>Following the success of exploratory efforts in 2024, the <strong>USFWS</strong>, the <strong>Bureau of Reclamation (BOR)</strong>, and <strong>Yakama Nation</strong> partnered to collect juvenile Sockeye Salmon from Cle Elum Reservoir. While construction of the permanent Helix passage system is complete, construction of the adjacent adult facility has postponed its operation, necessitating this temporary measure to collect and pass juvenile fish downstream.</p>
-        <p>Since netting began on <strong>April 8<sup>th</sup></strong>, approximately <strong>60,000</strong> fish have been captured and transported downstream. Many of these fish have been <strong>PIT</strong> tagged, allowing biologists to track survival and migration timing, critical information for long‑term restoration success.</p>
+        <p>Since netting began on <strong>April 8<sup>th</sup></strong>, approximately <strong>60,000</strong> fish have been captured and transported downstream. Many of these fish have been <strong>PIT</strong> tagged, allowing biologists to track survival and migration timing, critical information for long-term restoration success.</p>
       </td>
     </tr></table>
 
@@ -80,14 +80,14 @@
         <h2 style="text-align:center;">Keechelus Acoustics</h2>
         <p class="subhead">Good to Go</p>
         <p>An acoustic telemetry study launched in <strong>May 2024</strong> continues to provide valuable insights into <strong>Bull Trout</strong> movement and survival in Keechelus Reservoir, and entrainment at Keechelus Dam. Acoustic receivers remained deployed throughout the winter, with surface buoys removed ahead of ice formation to prevent displacement.</p>
-        <p>This spring, staff successfully recovered and redeployed receivers, ensuring year‑around data. This year we hope to capture and tag an additional <strong>10 Bull Trout</strong> during trap‑and‑haul events.</p>
+        <p>This spring, staff successfully recovered and redeployed receivers, ensuring year-around data. This year we hope to capture and tag an additional <strong>10 Bull Trout</strong> during trap-and-haul events.</p>
       </td>
-      <td class="imgCol"><img src="https://doimspp.sharepoint.com/:i:/s/MCFWCOYakimaSub-Office/EVByvN6D0dFGo8EjCnGn9k4BlWNLu7oBPaxXQABivV6LjQ?download=1" alt="Keechelus acoustic receiver"></td>
+      <td class="imgCol"><img src="https://raw.githubusercontent.com/Conman515/Newsletter/main/KeechelusAcoustics.JPG" alt="Keechelus acoustic receiver"></td>
     </tr></table>
 
     <!-- PIT Antennas -->
     <table role="presentation" width="100%" class="card"><tr>
-      <td class="imgCol"><img src="https://doimspp.sharepoint.com/:i:/s/MCFWCOYakimaSub-Office/Ee2HuJp26rBCsYyy-QMQf8MBiUWS4GSS_DFc165Xh9w9Eg?download=1" alt="PIT antenna site"></td>
+      <td class="imgCol"><img src="https://raw.githubusercontent.com/Conman515/Newsletter/main/PIT.jpg" alt="PIT antenna site"></td>
       <td class="txtCol pad">
         <h2 style="text-align:center;">PIT Antennas</h2>
         <p class="subhead">RIMROCK and KRD</p>
@@ -100,18 +100,17 @@
     <table role="presentation" width="100%" class="card"><tr><td class="pad">
       <h2 style="text-align:center;">Trap and Haul Reporting</h2>
       <p class="subhead">Moving Along</p>
-      <p>Over the winter, we finalized our <strong>2023</strong> trap‑and‑haul report and are nearing completion on the <strong>2024</strong> report. These annual summaries detail our Bull Trout monitoring and translocation work across the Yakima Basin.</p>
-      <p>In <strong>2024</strong>, we completed <strong>22</strong> trap‑and‑haul events and captured <strong>69</strong> unique Bull Trout. Of these, <strong>42</strong> were transported upstream past dams. Sampling events included five events at Clear Creek Dam, seven at Keechelus Dam, four at Kachess Dam, and three each at Tieton and Bumping dams.</p>
-      <p>This report also includes detailed information from our acoustic telemetry and PIT tag detection networks. These data streams provide insight into post‑transport survival, habitat use, and migration timing of Bull Trout across the basin. By integrating trap‑and‑haul results with other data, we can evaluate the long‑term success of upstream translocation and identify key habitats essential to recovery. Reports are available online: <a href="https://www.fws.gov/project/yakima-basin-program-mid-columbia-fish-and-wildlife-conservation-office">fws.gov/project/yakima‑basin‑program</a></p>
+      <p>Over the winter, we finalized our <strong>2023</strong> trap-and-haul report and are nearing completion on the <strong>2024</strong> report. These annual summaries detail our Bull Trout monitoring and translocation work across the Yakima Basin.</p>
+      <p>In <strong>2024</strong>, we completed <strong>22</strong> trap-and-haul events and captured <strong>69</strong> unique Bull Trout. Of these, <strong>42</strong> were transported upstream past dams. Sampling events included five events at Clear Creek Dam, seven at Keechelus Dam, four at Kachess Dam, and three each at Tieton and Bumping dams.</p>
     </td></tr></table>
 
     <!-- Farewell -->
     <table role="presentation" width="100%" class="card"><tr>
       <td class="txtCol pad">
         <h2 style="text-align:center;">Farewell</h2>
-        <p>This month, we said goodbye to two valued team members. <strong>Blake Hamilton</strong> accepted a Fish Biologist position with Kleinschmidt Group in Portland, Oregon, and <strong>Brittany Beebe</strong> joined the Oregon Department of Fish and Wildlife in La Grande, OR. Brittany started with the USFWS in November 2022 and served as YRBWEP liaison. She led analysis and reporting of Bull Trout monitoring data from our trap‑and‑haul program. Blake Hamilton joined the USFWS in November 2023 and led acoustic telemetry work to assess Bull Trout survival and entrainment in Keechelus Reservoir. We’re grateful for their dedication and the time they invested into improving the Yakima Basin.</p>
+        <p>This month, we said goodbye to two valued team members. <strong>Blake Hamilton</strong> accepted a Fish Biologist position with Kleinsschmidt Group in Portland, Oregon, and <strong>Brittany Beebe</strong> joined the Oregon Department of Fish and Wildlife in La Grande, OR. Brittany started with the USFWS in November 2022 and served as YRBWEP liaison. She led analysis and reporting of Bull Trout monitoring data from our trap-and-haul program. Blake Hamilton joined the USFWS in November 2023 and led acoustic telemetry work to assess Bull Trout survival and entrainment in Keechelus Reservoir. We’re grateful for their dedication and the time they invested into improving the Yakima Basin.</p>
       </td>
-      <td class="imgCol"><img src="https://doimspp.sharepoint.com/:i:/s/MCFWCOYakimaSub-Office/ETJTUMjyB_tFuVeek3s_PrEBwwDqHw1ks2cfblW4nyD5Qw?download=1" alt="Brittany Beebe and Blake Hamilton"></td>
+      <td class="imgCol"><img src="https://raw.githubusercontent.com/Conman515/Newsletter/main/Blake_Brittany.jpg" alt="Brittany Beebe and Blake Hamilton"></td>
     </tr></table>
 
   </td></tr></table>
