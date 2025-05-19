@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <title>USFWS - Yakima Newsletter | Mar & Apr 2025</title>
+  <style>
+    body{margin:0;padding:0;background:#eef2f6;font-family:Arial,Helvetica,sans-serif;color:#343434;}
+    table{border-collapse:collapse!important;width:100%;}
+    img{display:block;border:0;outline:none;text-decoration:none;width:100%;height:auto;border-radius:12px;}
+    h1,h2{margin:0;font-family:Georgia,'Times New Roman',serif;}
+    h1{font-size:44px;line-height:50px;font-weight:700;color:#ffffff;letter-spacing:0.6px;}
+    h2{font-size:30px;line-height:36px;font-weight:700;color:#00579d;letter-spacing:0.25px;}
+    p{margin:16px 0;font-size:19px;line-height:1.65;}
+    ul{margin:16px 0 0 0;padding-left:28px;font-size:19px;line-height:1.65;}
+
+    .mast{background:#00579d;border-radius:0 0 16px 16px;}
+    .mastInner td{vertical-align:bottom;}
+    .mastInner .titleCell{padding:60px 4%;text-align:center;}
+    .mastInner .imgCell{width:180px;padding:0 0 12px 4%;}
+
+    .card{background:#ffffff;border:1px solid #cfd4da;border-radius:16px;margin-top:36px;overflow:hidden;}
+    .pad{padding:38px 5%;}
+    .imgCol{width:42%;vertical-align:top;}
+    .txtCol{width:58%;vertical-align:top;padding-left:34px;}
+    .subhead{font-size:21px;font-weight:700;text-transform:uppercase;text-align:center;margin:14px 0 22px;color:#222;letter-spacing:0.3px;}
+
+    @media only screen and (max-width:720px){
+      h1{font-size:34px;line-height:40px;}
+      h2{font-size:24px;line-height:30px;}
+      p,ul{font-size:17px;}
+      .imgCol,.txtCol{display:block;width:100%!important;padding:0!important;}
+      .txtCol{padding:28px 6%!important;}
+      .mastInner .imgCell{display:none!important;}
+      .mastInner .titleCell{padding:40px 6%!important;}
+    }
+  </style>
+</head>
+<body>
+  <table role="presentation" bgcolor="#eef2f6" cellspacing="0" cellpadding="0"><tr><td>
+
+    <!-- Masthead: robust blue background & inline logo -->
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" bgcolor="#00579d" style="background:#00579d;">
+      <tr>
+        <td bgcolor="#00579d" style="background:#00579d; padding:0;">
+          <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
+            <tr>
+              <td bgcolor="#00579d" style="background:#00579d; padding:0 0 12px 4%; width:180px;" valign="bottom">
+                <img src="https://doimspp.sharepoint.com/:u:/s/MCFWCOYakimaSub-Office/EWh0dty67h1PpPs7fO9kmjkBiGc6tQYhxMFBcCSRduUZpQ?download=1" alt="USFWS representative" width="180" style="display:block;border:0;width:100%;height:auto;">
+              </td>
+              <td bgcolor="#00579d" style="background:#00579d; padding:60px 4%;" align="center" valign="bottom">
+                <h1 style="font-size:44px;line-height:50px;font-weight:700;letter-spacing:0.6px;color:#ffffff;margin:0;">
+                  U.S. Fish and Wildlife Service&nbsp;&ndash;&nbsp;Yakima<br>Newsletter
+                </h1>
+                <p style="margin:12px 0 0;font-size:22px;font-weight:600;letter-spacing:0.3px;color:#dbe6f3;">
+                  March&nbsp;&amp;&nbsp;April&nbsp;2025
+                </p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+
+    <!-- Cle elum netting -->
+    <table role="presentation" width="100%" class="card"><tr>
+      <td class="imgCol"><img src="https://doimspp.sharepoint.com/:i:/s/MCFWCOYakimaSub-Office/EUS5J_A9ofhBmB1DPhngw2kBVEss_n-rfX408xgBxArY2A?download=1" alt="Cle Elum netting"></td>
+      <td class="txtCol pad">
+        <h2 style="text-align:center;">Cle Elum Netting</h2>
+        <p class="subhead">60,000 SOCKEYE SMOLTS and counting</p>
+        <p>Following the success of exploratory efforts in 2024, the <strong>USFWS</strong>, the <strong>Bureau of Reclamation (BOR)</strong>, and <strong>Yakama Nation</strong> partnered to collect juvenile Sockeye Salmon from Cle Elum Reservoir. While construction of the permanent Helix passage system is complete, construction of the adjacent adult facility has postponed its operation, necessitating this temporary measure to collect and pass juvenile fish downstream.</p>
+        <p>Since netting began on <strong>April 8<sup>th</sup></strong>, approximately <strong>60,000</strong> fish have been captured and transported downstream. Many of these fish have been <strong>PIT</strong> tagged, allowing biologists to track survival and migration timing, critical information for long‑term restoration success.</p>
+      </td>
+    </tr></table>
+
+    <!-- Keechelus Acoustics -->
+    <table role="presentation" width="100%" class="card"><tr>
+      <td class="txtCol pad">
+        <h2 style="text-align:center;">Keechelus Acoustics</h2>
+        <p class="subhead">Good to Go</p>
+        <p>An acoustic telemetry study launched in <strong>May 2024</strong> continues to provide valuable insights into <strong>Bull Trout</strong> movement and survival in Keechelus Reservoir, and entrainment at Keechelus Dam. Acoustic receivers remained deployed throughout the winter, with surface buoys removed ahead of ice formation to prevent displacement.</p>
+        <p>This spring, staff successfully recovered and redeployed receivers, ensuring year‑around data. This year we hope to capture and tag an additional <strong>10 Bull Trout</strong> during trap‑and‑haul events.</p>
+      </td>
+      <td class="imgCol"><img src="https://doimspp.sharepoint.com/:i:/s/MCFWCOYakimaSub-Office/EVByvN6D0dFGo8EjCnGn9k4BlWNLu7oBPaxXQABivV6LjQ?download=1" alt="Keechelus acoustic receiver"></td>
+    </tr></table>
+
+    <!-- PIT Antennas -->
+    <table role="presentation" width="100%" class="card"><tr>
+      <td class="imgCol"><img src="https://doimspp.sharepoint.com/:i:/s/MCFWCOYakimaSub-Office/Ee2HuJp26rBCsYyy-QMQf8MBiUWS4GSS_DFc165Xh9w9Eg?download=1" alt="PIT antenna site"></td>
+      <td class="txtCol pad">
+        <h2 style="text-align:center;">PIT Antennas</h2>
+        <p class="subhead">RIMROCK and KRD</p>
+        <p><strong>All</strong> of our PIT antennas that monitor the <strong>Kittitas Reclamation Districts (KRD)</strong> supplementation streams have been online and operational since <strong>March 19<sup>th</sup></strong>. These sites help water managers and biologists gain a better understanding of how salmonids utilize these streams. The KRD pumps water from their canal into these tributaries to enhance flow conditions. All data from these sites are available online through <strong>PTAGIS</strong>.</p>
+        <p>All but one of our Rimrock basin PIT antennas have been operational since <strong>April 29<sup>th</sup></strong>. These sites are located in spawning tributaries as well as key infrastructure, such as Clear Creek Dam and the defunct fish ladder now being replaced. These sites provide us with useful information such as survival estimates, spawn timing, and other critical metrics that help us successfully manage Rimrock Bull Trout populations.</p>
+      </td>
+    </tr></table>
+
+    <!-- Trap and haul reporting -->
+    <table role="presentation" width="100%" class="card"><tr><td class="pad">
+      <h2 style="text-align:center;">Trap and Haul Reporting</h2>
+      <p class="subhead">Moving Along</p>
+      <p>Over the winter, we finalized our <strong>2023</strong> trap‑and‑haul report and are nearing completion on the <strong>2024</strong> report. These annual summaries detail our Bull Trout monitoring and translocation work across the Yakima Basin.</p>
+      <p>In <strong>2024</strong>, we completed <strong>22</strong> trap‑and‑haul events and captured <strong>69</strong> unique Bull Trout. Of these, <strong>42</strong> were transported upstream past dams. Sampling events included five events at Clear Creek Dam, seven at Keechelus Dam, four at Kachess Dam, and three each at Tieton and Bumping dams.</p>
+      <p>This report also includes detailed information from our acoustic telemetry and PIT tag detection networks. These data streams provide insight into post‑transport survival, habitat use, and migration timing of Bull Trout across the basin. By integrating trap‑and‑haul results with other data, we can evaluate the long‑term success of upstream translocation and identify key habitats essential to recovery. Reports are available online: <a href="https://www.fws.gov/project/yakima-basin-program-mid-columbia-fish-and-wildlife-conservation-office">fws.gov/project/yakima‑basin‑program</a></p>
+    </td></tr></table>
+
+    <!-- Farewell -->
+    <table role="presentation" width="100%" class="card"><tr>
+      <td class="txtCol pad">
+        <h2 style="text-align:center;">Farewell</h2>
+        <p>This month, we said goodbye to two valued team members. <strong>Blake Hamilton</strong> accepted a Fish Biologist position with Kleinschmidt Group in Portland, Oregon, and <strong>Brittany Beebe</strong> joined the Oregon Department of Fish and Wildlife in La Grande, OR. Brittany started with the USFWS in November 2022 and served as YRBWEP liaison. She led analysis and reporting of Bull Trout monitoring data from our trap‑and‑haul program. Blake Hamilton joined the USFWS in November 2023 and led acoustic telemetry work to assess Bull Trout survival and entrainment in Keechelus Reservoir. We’re grateful for their dedication and the time they invested into improving the Yakima Basin.</p>
+      </td>
+      <td class="imgCol"><img src="https://doimspp.sharepoint.com/:i:/s/MCFWCOYakimaSub-Office/ETJTUMjyB_tFuVeek3s_PrEBwwDqHw1ks2cfblW4nyD5Qw?download=1" alt="Brittany Beebe and Blake Hamilton"></td>
+    </tr></table>
+
+  </td></tr></table>
+</body>
+</html>
