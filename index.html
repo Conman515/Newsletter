@@ -9,14 +9,18 @@
     nav{
       background:#00579d;
       padding:1em;
-      text-align:center;
       position:sticky;
       top:0;
       box-shadow:0 2px 4px rgba(0,0,0,0.15);
       z-index:100;
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      align-items:center;
+      gap:0.5em;
+      text-align:center;
     }
-    nav img{height:48px;vertical-align:middle;margin-right:16px;border-radius:4px;}
-    nav a{color:#fff;margin:0 1em;text-decoration:none;font-weight:bold;}
+    nav img{height:48px;margin:0 auto;border-radius:4px;}
+    nav a{color:#fff;text-decoration:none;font-weight:bold;padding:0.5em;}
     .hero{padding:2em 1em;text-align:center;}
     .collage{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:1em;}
     .collage img{
@@ -29,7 +33,10 @@
       transform:scale(1.05);
       box-shadow:0 4px 12px rgba(0,0,0,0.3);
     }
-    @media(max-width:600px){.collage img{width:100%;}}
+    @media(max-width:600px){
+      nav{grid-template-columns:1fr;}
+      .collage img{width:100%;}
+    }
   </style>
 </head>
 <body>
