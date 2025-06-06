@@ -6,13 +6,33 @@
   <title>Yakima Newsletter | 2025 Review</title>
   <style>
     body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#eef2f6;color:#343434;}
-    nav{background:#00579d;padding:1em;text-align:center;}
+    nav{
+      background:#00579d;
+      padding:1em;
+      text-align:center;
+      position:sticky;
+      top:0;
+      box-shadow:0 2px 4px rgba(0,0,0,0.15);
+      z-index:100;
+    }
     nav img{height:48px;vertical-align:middle;margin-right:16px;border-radius:4px;}
-    nav a{color:#fff;margin:0 0.5em;text-decoration:none;font-weight:bold;}
+    nav a{color:#fff;margin:0 1em;text-decoration:none;font-weight:bold;}
     .hero{padding:2em 1em;text-align:center;}
     .collage{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:1em;}
-    .collage img{flex:0 0 calc(50% - 10px);width:100%;max-width:360px;border-radius:8px;}
-    @media(max-width:600px){.collage img{flex-basis:100%;max-width:none;}}
+    .collage img{
+      flex:0 0 calc(50% - 10px);
+      width:100%;
+      max-width:360px;
+      border-radius:8px;
+      transition:transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .collage img:hover{
+      transform:scale(1.05);
+      box-shadow:0 4px 12px rgba(0,0,0,0.3);
+    }
+    @media(max-width:600px){
+      .collage img{flex-basis:100%;max-width:none;}
+    }
   </style>
 </head>
 <body>
