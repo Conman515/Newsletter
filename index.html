@@ -7,18 +7,29 @@
   <style>
     body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#eef2f6;color:#343434;}
     nav{background:#00579d;padding:1em;text-align:center;}
+    nav img{height:48px;vertical-align:middle;margin-right:16px;border-radius:4px;}
     nav a{color:#fff;margin:0 0.5em;text-decoration:none;font-weight:bold;}
-    .container{padding:2em;max-width:800px;margin:auto;}
+    .hero{padding:2em 1em;text-align:center;}
+    .collage{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:1em;}
+    .collage img{width:calc(50% - 10px);max-width:360px;border-radius:8px;}
+    @media(max-width:600px){.collage img{width:100%;}}
   </style>
 </head>
 <body>
   <nav>
+    <img src="logo/USFWS Logo.jpg.webp" alt="USFWS logo">
     <a href="April2025/MarchApril2025Newsletter.html">Mar &amp; Apr 2025</a>
     <a href="May2025/May2025Newsletter.html">May 2025</a>
   </nav>
-  <div class="container">
+  <div class="hero">
     <h1>Yakima Newsletter &ndash; 2025 Review</h1>
-    <p>Select a month to read that issue.</p>
+    <p>Select a month below to explore each issue.</p>
+    <div class="collage">
+      <img src="April2025/CleElumNetting.JPG" alt="Cle Elum netting">
+      <img src="April2025/KeechelusAcoustics.JPG" alt="Keechelus acoustics">
+      <img src="May2025/CleFish.jpg" alt="Cle Elum fish">
+      <img src="May2025/Tieton_Dam.jpg" alt="Tieton Dam">
+    </div>
   </div>
 </body>
 </html>
