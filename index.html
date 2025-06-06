@@ -39,20 +39,13 @@
       margin-bottom:0.5em;
     }
     .hero p{margin-bottom:2em;}
-    .collage{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:2em;}
-    .collage img{
-      flex:0 0 calc(50% - 10px);
-      max-width:100%;
-      width:100%;
-      border-radius:8px;
-      transition:transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .collage img:hover{
-      transform:scale(1.05);
-      box-shadow:0 4px 12px rgba(0,0,0,0.3);
-    }
+    .issue-grid{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;margin-top:2em;}
+    .issue-card{position:relative;flex:0 0 280px;text-decoration:none;color:#fff;border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,0.2);transition:transform 0.3s ease, box-shadow 0.3s ease;}
+    .issue-card img{width:100%;height:200px;object-fit:cover;display:block;}
+    .issue-card span{position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,0.6);padding:0.5em;font-weight:bold;font-size:1.25em;text-align:center;}
+    .issue-card:hover{transform:scale(1.05);box-shadow:0 4px 12px rgba(0,0,0,0.3);}
     @media(max-width:600px){
-      .collage img{flex-basis:100%;}
+      .issue-card{flex-basis:100%;}
       nav a{flex-basis:100%;}
     }
   </style>
@@ -66,11 +59,15 @@
   <div class="hero">
     <h1>Yakima Newsletter &ndash; 2025 Review</h1>
     <p>Select a month below to explore each issue.</p>
-    <div class="collage">
-      <img src="April2025/CleElumNetting.JPG" alt="Cle Elum netting">
-      <img src="April2025/KeechelusAcoustics.JPG" alt="Keechelus acoustics">
-      <img src="May2025/CleFish.jpg" alt="Cle Elum fish">
-      <img src="May2025/Tieton_Dam.jpg" alt="Tieton Dam">
+    <div class="issue-grid">
+      <a class="issue-card" href="April2025/MarchApril2025Newsletter.html">
+        <img src="April2025/CleElumNetting.JPG" alt="Mar &amp; Apr 2025">
+        <span>Mar &amp; Apr 2025</span>
+      </a>
+      <a class="issue-card" href="May2025/May2025Newsletter.html">
+        <img src="May2025/eDNA.jpg" alt="May 2025">
+        <span>May 2025</span>
+      </a>
     </div>
   </div>
 </body>
