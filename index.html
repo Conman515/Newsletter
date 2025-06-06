@@ -19,7 +19,16 @@
     nav a{color:#fff;margin:0 1em;text-decoration:none;font-weight:bold;}
     .hero{padding:2em 1em;text-align:center;}
     .collage{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:1em;}
-    .collage img{width:calc(50% - 10px);max-width:360px;border-radius:8px;}
+    .collage img{
+      width:calc(50% - 10px);
+      max-width:360px;
+      border-radius:8px;
+      transition:transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .collage img:hover{
+      transform:scale(1.05);
+      box-shadow:0 4px 12px rgba(0,0,0,0.3);
+    }
     @media(max-width:600px){.collage img{width:100%;}}
   </style>
 </head>
