@@ -10,14 +10,25 @@
     nav{
       background:#00579d;
       padding:1em;
-      text-align:center;
       position:sticky;
       top:0;
       box-shadow:0 2px 4px rgba(0,0,0,0.15);
       z-index:100;
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      align-items:center;
+      gap:0.5em;
     }
-    nav img{height:48px;vertical-align:middle;margin-right:16px;border-radius:4px;}
-    nav a{color:#fff;margin:0 1em;text-decoration:none;font-weight:bold;}
+    nav img{height:48px;margin-right:16px;border-radius:4px;}
+    nav a{
+      color:#fff;
+      text-decoration:none;
+      font-weight:bold;
+      flex:1 0 50%;
+      text-align:center;
+      padding:0.5em 0;
+    }
     .hero{padding:2em 1em;text-align:center;}
     .hero h1{font-family:'Playfair Display',serif;}
     .collage{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:1em;}
@@ -34,6 +45,7 @@
     }
     @media(max-width:600px){
       .collage img{flex-basis:100%;}
+      nav a{flex-basis:100%;}
     }
   </style>
 </head>
