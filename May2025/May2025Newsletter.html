@@ -19,7 +19,7 @@
       --neutral-light:#d9f3ff;
       --highlight:#000000;
     }
-    body{margin:0;padding:0 36px;background:#a0acbd;font-family:'Inter',Arial,Helvetica,sans-serif;color:#000000;}
+    body{margin:0;background:#a0acbd;font-family:'Inter',Arial,Helvetica,sans-serif;color:#000000;}
     *,*::before,*::after{box-sizing:border-box;}
     table{border-collapse:collapse!important;width:100%;}
     img{display:block;border:0;outline:none;text-decoration:none;width:100%;height:auto;border-radius:12px;}
@@ -87,6 +87,8 @@
 
     .menu-items.show{display:flex;}
 
+    .page{padding:0 36px;}
+
 
     @media only screen and (max-width:720px){
       h1{font-size:34px;line-height:40px;}
@@ -114,7 +116,7 @@
   <table role="presentation" bgcolor="#a0acbd" style="background:#a0acbd;" cellspacing="0" cellpadding="0"><tr><td>
 
     <!-- Masthead: robust blue background & inline logo -->
-    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" bgcolor="#4c7eb0" style="background:var(--primary);">
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" bgcolor="#4c7eb0" style="background:var(--primary);" class="mast">
       <tr>
         <td bgcolor="#4c7eb0" style="background:var(--primary); padding:0;">
           <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
@@ -136,7 +138,8 @@
       </tr>
     </table>
 
-  
+    <div class="page">
+
     <!-- eDNA Sampling at Toppenish NWR -->
     <table role="presentation" width="100%" class="card"><tr>
       <td class="imgCol"><img src="https://raw.githubusercontent.com/Conman515/Newsletter/main/May2025/eDNA.jpg" alt="Collecting eDNA sample at Toppenish NWR"></td>
@@ -176,6 +179,8 @@
       </td>
       <td class="imgCol"><img src="https://raw.githubusercontent.com/Conman515/Newsletter/main/May2025/Tieton_Dam.jpg" alt="Tieton Dam"></td>
     </tr></table>
+
+    </div>
 
   </td></tr></table>
   <script>
