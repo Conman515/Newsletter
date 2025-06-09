@@ -3,53 +3,108 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Yakima Newsletter | 2025</title>
-  <meta property="og:title" content="Yakima Newsletter – 2025">
-  <meta property="og:description" content="U.S. Fish &amp; Wildlife Service Yakima Newsletter">
-  <meta property="og:image" content="https://raw.githubusercontent.com/Conman515/Newsletter/main/logo/USFWS%20Logo.jpg.webp">
-  <meta property="og:type" content="website">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <title>The Leaky Wader</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <style>
-    body{margin:0;font-family:'Inter',Arial,Helvetica,sans-serif;background:#eef2f6;color:#343434;}
-    .hero{
-      padding:3em 1em;
-      text-align:center;
-      background:linear-gradient(135deg,#fff,#dfe8f2);
+    html, body {
+      height: 100%;
+      margin: 0;
     }
-    .hero h1{
-      font-family:'Playfair Display',serif;
-      margin-bottom:0.5em;
+    body {
+      font-family: 'Playfair Display', serif;
+      background: #a0acbd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 2s ease-in-out;
     }
-    .hero p{margin-bottom:2em;}
-    .issue-grid{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;margin-top:2em;}
-    .issue-card{position:relative;flex:0 0 280px;text-decoration:none;color:#fff;border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,0.2);transition:transform 0.3s ease, box-shadow 0.3s ease;}
-    .issue-card img{width:100%;height:200px;object-fit:cover;display:block;}
-    .issue-card span{position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,0.6);padding:0.5em;font-weight:bold;font-size:1.25em;text-align:center;}
-    .issue-card:hover{transform:scale(1.05);box-shadow:0 4px 12px rgba(0,0,0,0.3);}
-    @media(max-width:600px){
-      .issue-card{flex-basis:100%;}
-
+    body.fade-in { opacity: 1; }
+    body.fade-out { opacity: 0; }
+      .hero {
+        color: #000;
+      }
+      .title {
+        font-size: 15rem;
+        margin: 0;
+        line-height: 1.1;
+      }
+      .title span {
+        display: block;
+        padding: 0;
+        margin: 0;
+        transform: translateY(-150px);
+        opacity: 0;
+        animation: drop 0.9s forwards ease-in;
+      }
+      .title span:nth-child(2) { animation-delay: 0.15s; }
+      .title span:nth-child(3) { animation-delay: 0.3s; }
+      @keyframes drop {
+        0% {
+          transform: translateY(-150px);
+          opacity: 0;
+        }
+        60% {
+          transform: translateY(20px);
+          opacity: 1;
+        }
+        80% {
+          transform: translateY(-10px);
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1; /* Keep title visible after animation */
+        }
+      }
+    .cta {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.75em 2em;
+      background: #4c7eb0;
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.25rem;
+      border-radius: 4px;
+      transition: background 0.3s, transform 0.3s;
+    }
+    .cta:hover {
+      background: #e09f1f;
+      transform: translateY(-3px) scale(1.05);
+    }
+    @media (max-width: 600px) {
+      .title {
+        font-size: 2.5rem;
+      }
+      .cta {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
 <body>
   <div class="hero">
-    <h1>Yakima Newsletter &ndash; 2025</h1>
-    <p>Select a month below to explore each issue.</p>
-    <div class="issue-grid">
-      <a class="issue-card" href="DecJan2025/DecJan2025Newsletter.html">
-        <img src="DecJan2025/Acoustic_DEC.png" alt="Dec &amp; Jan 2025">
-        <span>Dec &amp; Jan 2025</span>
-      </a>
-      <a class="issue-card" href="April2025/MarchApril2025Newsletter.html">
-        <img src="April2025/CleElumNetting.JPG" alt="Mar &amp; Apr 2025">
-        <span>Mar &amp; Apr 2025</span>
-      </a>
-      <a class="issue-card" href="May2025/May2025Newsletter.html">
-        <img src="May2025/eDNA.jpg" alt="May 2025">
-        <span>May 2025</span>
-      </a>
-    </div>
+    <h1 class="title">
+      <span>The</span>
+      <span>Leaky</span>
+      <span>Wader</span>
+    </h1>
+    <a href="newsletter.html" class="cta">Enter</a>
   </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      document.body.classList.add('fade-in');
+      document.querySelectorAll('a').forEach(function(link){
+        const href = link.getAttribute('href');
+        if(!href || href.startsWith('#') || link.target === '_blank') return;
+        link.addEventListener('click', function(e){
+          e.preventDefault();
+          document.body.classList.remove('fade-in');
+          document.body.classList.add('fade-out');
+          setTimeout(function(){ window.location.href = href; }, 300);
+        });
+      });
+    });
+  </script>
 </body>
 </html>
