@@ -31,18 +31,17 @@
 
     .mast{background:var(--primary);border-radius:0 0 16px 16px;}
     .mastInner td{vertical-align:bottom;}
-    .mastInner .titleCell{padding:60px 0;text-align:center;}
-    .mastInner .imgCell{width:180px;padding:0 0 12px 0;}
+    .mastInner .titleCell{padding:60px 4%;text-align:center;}
+    .mastInner .imgCell{width:180px;padding:0 0 12px 4%;}
 
     .card{background:#FFFFFF;/* fallback */background:var(--accent2);border:1px solid var(--accent1);border-radius:16px;margin-top:36px;overflow:hidden;}
     .pad{padding:38px 5%;}
     .imgCol{width:42%;vertical-align:top;}
     .txtCol{width:58%;vertical-align:top;padding-left:34px;}
-    .content{padding:0 36px;}
     .subhead{font-size:21px;font-weight:700;text-transform:uppercase;text-align:center;margin:14px 0 22px;color:#000;letter-spacing:0.3px;}
     .menu-bar{
       background:var(--primary);
-      padding:0.5em 0;
+      padding:0.5em 1em;
       position:sticky;
       top:0;
       box-shadow:0 2px 4px rgba(0,0,0,0.15);
@@ -96,8 +95,7 @@
       .imgCol,.txtCol{display:block;width:100%!important;padding:0!important;}
       .txtCol{padding:28px 6%!important;}
       .mastInner .imgCell{display:none!important;}
-      .mastInner .titleCell{padding:40px 0!important;}
-      .content{padding:0 6%!important;}
+      .mastInner .titleCell{padding:40px 6%!important;}
       .menu-items a{flex-basis:100%;}
     }
   </style>
@@ -113,7 +111,7 @@
     </div>
   </nav>
 
-
+  <table role="presentation" bgcolor="#a0acbd" style="background:#a0acbd;" cellspacing="0" cellpadding="0"><tr><td>
 
     <!-- Masthead: robust blue background & inline logo -->
     <table role="presentation" width="100%" cellspacing="0" cellpadding="0" bgcolor="#4c7eb0" style="background:var(--primary);">
@@ -121,10 +119,10 @@
         <td bgcolor="#4c7eb0" style="background:var(--primary); padding:0;">
           <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
             <tr>
-              <td bgcolor="#4c7eb0" style="background:var(--primary); padding:0 0 12px 0; width:180px;" valign="bottom">
+              <td bgcolor="#4c7eb0" style="background:var(--primary); padding:0 0 12px 4%; width:180px;" valign="bottom">
                  <img src="https://raw.githubusercontent.com/Conman515/Newsletter/main/logo/USFWS%20Logo.jpg.webp" alt="USFWS logo" width="180" style="display:block;border:0;width:100%;height:auto;">
               </td>
-              <td bgcolor="#4c7eb0" style="background:var(--primary); padding:60px 0;" align="center" valign="bottom">
+              <td bgcolor="#4c7eb0" style="background:var(--primary); padding:60px 4%;" align="center" valign="bottom">
                 <h1 style="font-size:44px;line-height:50px;font-weight:700;letter-spacing:0.6px;color:var(--neutral-light);margin:0;">
                   U.S. Fish and Wildlife Service&nbsp;&ndash;&nbsp;Yakima<br>Newsletter
                 </h1>
@@ -136,12 +134,10 @@
           </table>
         </td>
       </tr>
-      </table>
+    </table>
 
-      <div class="content">
-
-      <!-- Cle elum netting -->
-      <table role="presentation" width="100%" class="card"><tr>
+    <!-- Cle elum netting -->
+    <table role="presentation" width="100%" class="card"><tr>
       <td class="imgCol"><img src="https://raw.githubusercontent.com/Conman515/Newsletter/main/April2025/CleElumNetting.JPG" alt="Cle Elum netting"></td>
       <td class="txtCol pad">
         <h2 style="text-align:center;">Cle Elum Netting</h2>
@@ -188,10 +184,9 @@
         <p>This month, we said goodbye to two valued team members. <strong>Blake Hamilton</strong> accepted a Fish Biologist position with Kleinsschmidt Group in Portland, Oregon, and <strong>Brittany Beebe</strong> joined the Oregon Department of Fish and Wildlife in La Grande, OR. Brittany started with the USFWS in November 2022 and served as YRBWEP liaison. She led analysis and reporting of Bull Trout monitoring data from our trap-and-haul program. Blake Hamilton joined the USFWS in November 2023 and led acoustic telemetry work to assess Bull Trout survival and entrainment in Keechelus Reservoir. We’re grateful for their dedication and the time they invested into improving the Yakima Basin.</p>
       </td>
         <td class="imgCol"><img src="https://raw.githubusercontent.com/Conman515/Newsletter/main/April2025/Blake_Brittany.jpg" alt="Brittany Beebe and Blake Hamilton"></td>
-      </tr></table>
+    </tr></table>
 
-      </div>
-
+  </td></tr></table>
   <script>
     const menuBtn = document.getElementById('menuBtn');
     const menuItems = document.getElementById('menuItems');
