@@ -3,7 +3,7 @@ Assets and code for newsletter
 
 ## Design Colors
 
-All pages now use only black and white. Images are displayed with a grayscale filter so the newsletter renders entirely in monochrome.
+Pages were originally styled in black and white. Images now appear in full color because the grayscale filter has been removed.
 
 | Purpose | Color Description | HEX | Notes |
 |---------|------------------|-----|-------|
