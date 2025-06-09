@@ -31,27 +31,34 @@
     .imgCol{width:42%;vertical-align:top;}
     .txtCol{width:58%;vertical-align:top;padding-left:34px;}
     .subhead{font-size:21px;font-weight:700;text-transform:uppercase;text-align:center;margin:14px 0 22px;color:#222;letter-spacing:0.3px;}
-    nav{
+    .menu-bar{
       background:#00579d;
-      padding:1em;
+      padding:0.5em 1em;
       position:sticky;
       top:0;
       box-shadow:0 2px 4px rgba(0,0,0,0.15);
       z-index:100;
-      display:flex;
-      flex-wrap:wrap;
-      justify-content:center;
-      align-items:center;
-      gap:0.5em;
     }
-    nav a{
+    .menu-btn{
+      font-size:26px;
+      color:#fff;
+      background:none;
+      border:none;
+      cursor:pointer;
+    }
+    .menu-items{
+      display:none;
+      margin-top:0.5em;
+      gap:0.5em;
+      justify-content:center;
+    }
+    .menu-items a{
       color:#fff;
       text-decoration:none;
-      font-weight:bold;
-      flex:1 0 50%;
-      text-align:center;
-      padding:0.5em 0;
+      font-size:22px;
     }
+    .menu-items.show{display:flex;}
+    .menu-items a.disabled{visibility:hidden;}
 
 
     @media only screen and (max-width:720px){
@@ -62,13 +69,18 @@
       .txtCol{padding:28px 6%!important;}
       .mastInner .imgCell{display:none!important;}
       .mastInner .titleCell{padding:40px 6%!important;}
-      nav a{flex-basis:100%;}
+      .menu-items a{flex-basis:100%;}
     }
   </style>
 </head>
 <body>
-  <nav>
-    <a href="../index.html">Home</a>
+  <nav class="menu-bar">
+    <button id="menuBtn" class="menu-btn">&#9776;</button>
+    <div id="menuItems" class="menu-items">
+      <a href="../April2025/MarchApril2025Newsletter.html">&#8592;</a>
+      <a href="../index.html">&#8962;</a>
+      <a href="#" class="disabled">&#8594;</a>
+    </div>
   </nav>
 
   <table role="presentation" bgcolor="#eef2f6" cellspacing="0" cellpadding="0"><tr><td>
@@ -138,5 +150,10 @@
     </tr></table>
 
   </td></tr></table>
+  <script>
+    document.getElementById('menuBtn').addEventListener('click', function(){
+      document.getElementById('menuItems').classList.toggle('show');
+    });
+  </script>
 </body>
 </html>
