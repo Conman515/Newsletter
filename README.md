@@ -2,9 +2,13 @@
 Assets and code for newsletter
 
 ## Design Colors
-- **Navbar/Header:** Earthy Brown `#4A3B2A` with Cream White text `#FDFBF6`
-- **Buttons:** Primary Blue `#4C7EB0`; hover to Salmon Jump Orange `#FF8F40`
-- **Background:** Cream White `#FDFBF6`
-- **Cards/Panels:** Sky Beige `#E8D8C3` with subtle borders `#d7c4aa`
-- **Links:** Powdered Aqua `#88C3D0` hover to Federal Blue `#041E42`
-- **Data Visuals:** use Yellow, Orange and Aqua to differentiate series
+
+| Purpose | Color Description | HEX | Notes |
+|---------|------------------|-----|-------|
+| **Primary** | Soft Federal Blue | `#4C7EB0` | Main UI color + now used for text |
+| **Secondary** | Warm Sun Yellow | `#FFD966` | Accent and visual highlight |
+| **Accent 1** | Salmon Jump Orange | `#F4A261` | Based on the background hills |
+| **Accent 2** | Soft Sky Beige | `#E8D8C3` | Card backgrounds, sidebars |
+| **Neutral Light** | Cream White | `#FDFBF6` | Page background |
+| **Neutral Dark** | — | *n/a* | Removed in favor of blue |
+| **Highlight** | Powdered Aqua | `#88C3D0` | Water/splash accent color |
