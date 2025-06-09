@@ -11,6 +11,6 @@ Pages were originally styled in black and white. Images now appear in full color
 | **Secondary** | White | `#FFFFFF` | Highlights |
 | **Accent 1** | Orange | `#e09f1f` | Additional UI elements |
 | **Accent 2** | White | `#FFFFFF` | Card backgrounds, sidebars |
-| **Neutral Light** | Light Blue | `#d9f3ff` | Page background |
+| **Neutral Light** | Sage Gray | `#a0acbd` | Page background |
 | **Neutral Dark** | — | *n/a* | Removed |
 | **Highlight** | Black | `#000000` | Accent color |
