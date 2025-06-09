@@ -7,10 +7,10 @@ Pages were originally styled in black and white. Images now appear in full color
 
 | Purpose | Color Description | HEX | Notes |
 |---------|------------------|-----|-------|
-| **Primary** | Black | `#000000` | Main UI color |
+| **Primary** | Blue | `#4c7eb0` | Main UI color |
 | **Secondary** | White | `#FFFFFF` | Highlights |
-| **Accent 1** | Black | `#000000` | Additional UI elements |
+| **Accent 1** | Orange | `#e09f1f` | Additional UI elements |
 | **Accent 2** | White | `#FFFFFF` | Card backgrounds, sidebars |
-| **Neutral Light** | White | `#FFFFFF` | Page background |
+| **Neutral Light** | Light Blue | `#d9f3ff` | Page background |
 | **Neutral Dark** | — | *n/a* | Removed |
 | **Highlight** | Black | `#000000` | Accent color |
