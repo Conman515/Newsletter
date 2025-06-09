@@ -46,19 +46,32 @@
       border:none;
       cursor:pointer;
     }
+    .home-btn{
+      font-size:26px;
+      color:#fff;
+      text-decoration:none;
+      margin-left:0.5em;
+    }
     .menu-items{
       display:none;
-      margin-top:0.5em;
+      flex-direction:column;
+      position:fixed;
+      top:0;
+      left:0;
+      width:200px;
+      height:100%;
+      padding:1em;
       gap:0.5em;
-      justify-content:center;
+      background:#00579d;
+      z-index:101;
     }
     .menu-items a{
       color:#fff;
       text-decoration:none;
       font-size:22px;
+      margin:0.25em 0;
     }
     .menu-items.show{display:flex;}
-    .menu-items a.disabled{visibility:hidden;}
 
 
     @media only screen and (max-width:720px){
@@ -76,10 +89,11 @@
 <body>
   <nav class="menu-bar">
     <button id="menuBtn" class="menu-btn">&#9776;</button>
+    <a href="../index.html" class="home-btn">&#8962;</a>
     <div id="menuItems" class="menu-items">
-      <a href="../DecJan2025/DecJan2025Newsletter.html">&#8592;</a>
-      <a href="../index.html">&#8962;</a>
-      <a href="../May2025/May2025Newsletter.html">&#8594;</a>
+      <a href="../DecJan2025/DecJan2025Newsletter.html">Dec &amp; Jan 2025</a>
+      <a href="MarchApril2025Newsletter.html">Mar &amp; Apr 2025</a>
+      <a href="../May2025/May2025Newsletter.html">May 2025</a>
     </div>
   </nav>
 
