@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Leaky Wader</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+    body {
+      font-family: 'Playfair Display', serif;
+      background: #a0acbd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .hero {
+      color: #000;
+    }
+    .title {
+      font-size: 4rem;
+      margin: 0;
+      line-height: 1.1;
+    }
+    .title span {
+      display: block;
+      padding: 0;
+      margin: 0;
+      transform: translateY(-100px);
+      opacity: 0;
+      animation: drop 0.8s forwards;
+    }
+    .title span:nth-child(2) { animation-delay: 0.15s; }
+    .title span:nth-child(3) { animation-delay: 0.3s; }
+    @keyframes drop {
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    .cta {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.75em 2em;
+      background: #4c7eb0;
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.25rem;
+      border-radius: 4px;
+      transition: background 0.3s, transform 0.3s;
+    }
+    .cta:hover {
+      background: #e09f1f;
+      transform: translateY(-3px);
+    }
+    @media (max-width: 600px) {
+      .title {
+        font-size: 2.5rem;
+      }
+      .cta {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <h1 class="title">
+      <span>The</span>
+      <span>Leaky</span>
+      <span>Wader</span>
+    </h1>
+    <a href="index.html" class="cta">Enter</a>
+  </div>
+</body>
+</html>
