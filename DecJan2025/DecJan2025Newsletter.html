@@ -31,17 +31,18 @@
 
     .mast{background:var(--primary);border-radius:0 0 16px 16px;}
     .mastInner td{vertical-align:bottom;}
-    .mastInner .titleCell{padding:60px 4%;text-align:center;}
-    .mastInner .imgCell{width:180px;padding:0 0 12px 4%;}
+    .mastInner .titleCell{padding:60px 0;text-align:center;}
+    .mastInner .imgCell{width:180px;padding:0 0 12px 0;}
 
     .card{background:#FFFFFF;/* fallback */background:var(--accent2);border:1px solid var(--accent1);border-radius:16px;margin-top:36px;overflow:hidden;}
     .pad{padding:38px 5%;}
     .imgCol{width:42%;vertical-align:top;}
     .txtCol{width:58%;vertical-align:top;padding-left:34px;}
+    .content{padding:0 36px;}
     .subhead{font-size:21px;font-weight:700;text-transform:uppercase;text-align:center;margin:14px 0 22px;color:#000;letter-spacing:0.3px;}
     .menu-bar{
       background:var(--primary);
-      padding:0.5em 1em;
+      padding:0.5em 0;
       position:sticky;
       top:0;
       box-shadow:0 2px 4px rgba(0,0,0,0.15);
@@ -94,7 +95,8 @@
       .imgCol,.txtCol{display:block;width:100%!important;padding:0!important;}
       .txtCol{padding:28px 6%!important;}
       .mastInner .imgCell{display:none!important;}
-      .mastInner .titleCell{padding:40px 6%!important;}
+      .mastInner .titleCell{padding:40px 0!important;}
+      .content{padding:0 6%!important;}
       .menu-items a{flex-basis:100%;}
     }
   </style>
@@ -118,10 +120,10 @@
         <td bgcolor="#4c7eb0" style="background:var(--primary); padding:0;">
           <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
             <tr>
-              <td bgcolor="#4c7eb0" style="background:var(--primary); padding:0 0 12px 4%; width:180px;" valign="bottom">
+              <td bgcolor="#4c7eb0" style="background:var(--primary); padding:0 0 12px 0; width:180px;" valign="bottom">
                 <img src="https://raw.githubusercontent.com/Conman515/Newsletter/main/logo/USFWS%20Logo.jpg.webp" alt="USFWS logo" width="180" style="display:block;border:0;width:100%;height:auto;">
               </td>
-              <td bgcolor="#4c7eb0" style="background:var(--primary); padding:60px 4%;" align="center" valign="bottom">
+              <td bgcolor="#4c7eb0" style="background:var(--primary); padding:60px 0;" align="center" valign="bottom">
                 <h1 style="font-size:44px;line-height:50px;font-weight:700;letter-spacing:0.6px;color:var(--neutral-light);margin:0;">
                   U.S. Fish and Wildlife Service&nbsp;&ndash;&nbsp;Yakima<br>Newsletter
                 </h1>
@@ -133,9 +135,11 @@
           </table>
         </td>
       </tr>
-    </table>
+      </table>
 
-    <!-- Acoustic Monitoring -->
+      <div class="content">
+
+      <!-- Acoustic Monitoring -->
     <table role="presentation" width="100%" class="card"><tr>
       <td class="imgCol"><img src="Acoustic_DEC.png" alt="Bull Trout map in Keechelus"></td>
       <td class="txtCol pad">
@@ -182,9 +186,11 @@
         <p class="subhead">Antennas Off for the Winter</p>
         <p>PIT antennas in Big, Little, and Tucker creeks were shut down December&nbsp;4. The Taneum Creek site remains active. Kittitas Reclamation District diverts canal water to these streams to bolster flows for fish, and our monitoring assesses how many benefit. In 2024 the KRD sites logged <strong>768</strong> individual fish&mdash;including <strong>512</strong> O.&nbsp;mykiss, <strong>246</strong> Coho, and <strong>10</strong> Chinook.</p>
       </td>
-    </tr></table>
+      </tr></table>
 
-  </td></tr></table>
+      </div>
+
+    </td></tr></table>
   <script>
     const menuBtn = document.getElementById('menuBtn');
     const menuItems = document.getElementById('menuItems');
