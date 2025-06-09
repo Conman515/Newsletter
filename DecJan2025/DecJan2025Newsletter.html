@@ -11,28 +11,36 @@
   <meta property="og:type" content="article">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <style>
-    body{margin:0;padding:0;background:#FDFBF6;font-family:'Inter',Arial,Helvetica,sans-serif;color:#343434;}
+    :root{
+      --primary:#4C7EB0;
+      --secondary:#FFD966;
+      --accent1:#F4A261;
+      --accent2:#E8D8C3;
+      --neutral-light:#FDFBF6;
+      --highlight:#88C3D0;
+    }
+    body{margin:0;padding:0;background:var(--neutral-light);font-family:'Inter',Arial,Helvetica,sans-serif;color:#343434;}
     *,*::before,*::after{box-sizing:border-box;}
     table{border-collapse:collapse!important;width:100%;}
     img{display:block;border:0;outline:none;text-decoration:none;width:100%;height:auto;border-radius:12px;}
     h1,h2{margin:0;font-family:'Playfair Display',serif;}
-    h1{font-size:44px;line-height:50px;font-weight:700;color:#FDFBF6;letter-spacing:0.6px;}
-    h2{font-size:30px;line-height:36px;font-weight:700;color:#4C7EB0;letter-spacing:0.25px;}
+    h1{font-size:44px;line-height:50px;font-weight:700;color:var(--neutral-light);letter-spacing:0.6px;}
+    h2{font-size:30px;line-height:36px;font-weight:700;color:var(--primary);letter-spacing:0.25px;}
     p{margin:16px 0;font-size:19px;line-height:1.65;}
     ul{margin:16px 0 0 0;padding-left:28px;font-size:19px;line-height:1.65;}
 
-    .mast{background:#4A3B2A;border-radius:0 0 16px 16px;}
+    .mast{background:var(--primary);border-radius:0 0 16px 16px;}
     .mastInner td{vertical-align:bottom;}
     .mastInner .titleCell{padding:60px 4%;text-align:center;}
     .mastInner .imgCell{width:180px;padding:0 0 12px 4%;}
 
-    .card{background:#E8D8C3;border:1px solid #d7c4aa;border-radius:16px;margin-top:36px;overflow:hidden;}
+    .card{background:var(--accent2);border:1px solid var(--accent1);border-radius:16px;margin-top:36px;overflow:hidden;}
     .pad{padding:38px 5%;}
     .imgCol{width:42%;vertical-align:top;}
     .txtCol{width:58%;vertical-align:top;padding-left:34px;}
     .subhead{font-size:21px;font-weight:700;text-transform:uppercase;text-align:center;margin:14px 0 22px;color:#222;letter-spacing:0.3px;}
     .menu-bar{
-      background:#4A3B2A;
+      background:var(--primary);
       padding:0.5em 1em;
       position:sticky;
       top:0;
@@ -41,14 +49,14 @@
     }
     .menu-btn{
       font-size:26px;
-      color:#FDFBF6;
+      color:var(--neutral-light);
       background:none;
       border:none;
       cursor:pointer;
     }
     .home-btn{
       font-size:26px;
-      color:#FDFBF6;
+      color:var(--neutral-light);
       text-decoration:none;
       margin-left:0.5em;
     }
@@ -62,11 +70,11 @@
       height:calc(100% - 3em);
       padding:1em;
       gap:0.5em;
-      background:#4A3B2A;
+      background:var(--primary);
       z-index:101;
     }
     .menu-items a{
-      color:#FDFBF6;
+      color:var(--neutral-light);
       text-decoration:none;
       font-size:22px;
       margin:0.25em 0;
@@ -96,22 +104,22 @@
     </div>
   </nav>
 
-  <table role="presentation" bgcolor="#FDFBF6" cellspacing="0" cellpadding="0"><tr><td>
+  <table role="presentation" bgcolor="var(--neutral-light)" cellspacing="0" cellpadding="0"><tr><td>
 
     <!-- Masthead -->
-    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" bgcolor="#4A3B2A" style="background:#4A3B2A;">
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" bgcolor="var(--primary)" style="background:var(--primary);">
       <tr>
-        <td bgcolor="#4A3B2A" style="background:#4A3B2A; padding:0;">
+        <td bgcolor="var(--primary)" style="background:var(--primary); padding:0;">
           <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
             <tr>
-              <td bgcolor="#4A3B2A" style="background:#4A3B2A; padding:0 0 12px 4%; width:180px;" valign="bottom">
+              <td bgcolor="var(--primary)" style="background:var(--primary); padding:0 0 12px 4%; width:180px;" valign="bottom">
                 <img src="https://raw.githubusercontent.com/Conman515/Newsletter/main/logo/USFWS%20Logo.jpg.webp" alt="USFWS logo" width="180" style="display:block;border:0;width:100%;height:auto;">
               </td>
-              <td bgcolor="#4A3B2A" style="background:#4A3B2A; padding:60px 4%;" align="center" valign="bottom">
-                <h1 style="font-size:44px;line-height:50px;font-weight:700;letter-spacing:0.6px;color:#FDFBF6;margin:0;">
+              <td bgcolor="var(--primary)" style="background:var(--primary); padding:60px 4%;" align="center" valign="bottom">
+                <h1 style="font-size:44px;line-height:50px;font-weight:700;letter-spacing:0.6px;color:var(--neutral-light);margin:0;">
                   U.S. Fish and Wildlife Service&nbsp;&ndash;&nbsp;Yakima<br>Newsletter
                 </h1>
-                <p style="margin:12px 0 0;font-size:22px;font-weight:600;letter-spacing:0.3px;color:#dbe6f3;">
+                <p style="margin:12px 0 0;font-size:22px;font-weight:600;letter-spacing:0.3px;color:var(--highlight);">
                   December&nbsp;2024&nbsp;&amp;&nbsp;January&nbsp;2025
                 </p>
               </td>
