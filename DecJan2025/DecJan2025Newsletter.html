@@ -56,10 +56,10 @@
       display:none;
       flex-direction:column;
       position:fixed;
-      top:0;
+      top:3em;
       left:0;
       width:200px;
-      height:100%;
+      height:calc(100% - 3em);
       padding:1em;
       gap:0.5em;
       background:#00579d;
@@ -172,8 +172,11 @@
 
   </td></tr></table>
   <script>
-    document.getElementById('menuBtn').addEventListener('click', function(){
-      document.getElementById('menuItems').classList.toggle('show');
+    const menuBtn = document.getElementById('menuBtn');
+    const menuItems = document.getElementById('menuItems');
+    menuBtn.addEventListener('click', function(){
+      menuItems.classList.toggle('show');
+      menuBtn.innerHTML = menuItems.classList.contains('show') ? '&#10006;' : '&#9776;';
     });
   </script>
 </body>
