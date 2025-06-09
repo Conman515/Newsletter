@@ -11,14 +11,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <style>
     :root{
-      --primary:#4C7EB0;
-      --secondary:#FFD966;
-      --accent1:#F4A261;
-      --accent2:#E8D8C3;
+      --primary:#000000;
+      --secondary:#FFFFFF;
+      --accent1:#000000;
+      --accent2:#FFFFFF;
       --neutral-light:#FFFFFF;
-      --highlight:#88C3D0;
+      --highlight:#000000;
     }
-    body{margin:0;font-family:'Inter',Arial,Helvetica,sans-serif;background:var(--neutral-light);color:#343434;}
+    body{margin:0;font-family:'Inter',Arial,Helvetica,sans-serif;background:var(--neutral-light);color:#000000;}
     .hero{
       padding:3em 1em;
       text-align:center;
@@ -32,7 +32,7 @@
     .hero p{margin-bottom:2em;}
     .issue-grid{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;margin-top:2em;}
     .issue-card{position:relative;flex:0 0 280px;text-decoration:none;color:var(--neutral-light);border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,0.2);transition:transform 0.3s ease, box-shadow 0.3s ease;}
-    .issue-card img{width:100%;height:200px;object-fit:cover;display:block;}
+    .issue-card img{width:100%;height:200px;object-fit:cover;display:block;filter:grayscale(100%);}
     .issue-card span{position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,0.6);padding:0.5em;font-weight:bold;font-size:1.25em;text-align:center;}
     .issue-card:hover{transform:scale(1.05);box-shadow:0 4px 12px var(--accent1);}
     @media(max-width:600px){
