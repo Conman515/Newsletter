@@ -3,12 +3,14 @@ Assets and code for newsletter
 
 ## Design Colors
 
+All pages now use only black and white. Images are displayed with a grayscale filter so the newsletter renders entirely in monochrome.
+
 | Purpose | Color Description | HEX | Notes |
 |---------|------------------|-----|-------|
-| **Primary** | Soft Federal Blue | `#4C7EB0` | Main UI color + now used for text |
-| **Secondary** | Warm Sun Yellow | `#FFD966` | Accent and visual highlight |
-| **Accent 1** | Salmon Jump Orange | `#F4A261` | Based on the background hills |
+| **Primary** | Black | `#000000` | Main UI color |
+| **Secondary** | White | `#FFFFFF` | Highlights |
+| **Accent 1** | Black | `#000000` | Additional UI elements |
 | **Accent 2** | White | `#FFFFFF` | Card backgrounds, sidebars |
 | **Neutral Light** | White | `#FFFFFF` | Page background |
-| **Neutral Dark** | — | *n/a* | Removed in favor of blue |
-| **Highlight** | Powdered Aqua | `#88C3D0` | Water/splash accent color |
+| **Neutral Dark** | — | *n/a* | Removed |
+| **Highlight** | Black | `#000000` | Accent color |
