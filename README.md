@@ -1,6 +1,6 @@
 # The Leaky Wader
 
-Welcome to the U.S. Fish & Wildlife Service's Yakima Basin newsletter site. This repository hosts the static web pages for **The Leaky Wader**, a quarterly peek behind the scenes of our fish management program.
+Welcome to the U.S. Fish & Wildlife Service's Yakima Basin newsletter site. This repository hosts the static web pages for **The Leaky Wader**, a Monthly peek behind the scenes of our fish management program.
 
 ## What you'll find here
 
