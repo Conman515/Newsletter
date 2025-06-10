@@ -9,19 +9,37 @@
     :root{
       --primary:#4c7eb0;
       --accent1:#e09f1f;
+      --accent2:#FFFFFF;
       --neutral-light:#d9f3ff;
     }
     body{margin:0;font-family:'Newsreader',serif;background:#a0acbd;color:#000;display:flex;flex-direction:column;min-height:100vh;opacity:0;transition:opacity 0.5s ease-in-out;}
     body.fade-in{opacity:1;}
     body.fade-out{opacity:0;}
-    header{background:var(--primary);color:var(--neutral-light);display:flex;align-items:center;justify-content:space-between;padding:0.5em 1em;}
+    header{
+      background:linear-gradient(90deg, var(--primary), var(--accent1));
+      color:var(--neutral-light);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:0.5em 1em;
+      box-shadow:0 2px 4px rgba(0,0,0,0.15);
+    }
     header .logo{display:flex;align-items:center;font-weight:700;font-size:1.4rem;}
     header .logo img{height:40px;margin-right:0.5em;}
     nav{position:relative;}
     .nav-links{list-style:none;display:flex;margin:0;padding:0;}
     .nav-links li{position:relative;}
-    .nav-links>li>a{display:block;padding:0.5em 1em;color:var(--neutral-light);text-decoration:none;}
-    .nav-links li:hover{background:rgba(0,0,0,0.1);}
+    .nav-links>li>a{
+      display:block;
+      padding:0.5em 1em;
+      color:var(--neutral-light);
+      text-decoration:none;
+      transition:background 0.3s,color 0.3s;
+    }
+    .nav-links li:hover>a{
+      background:rgba(255,255,255,0.1);
+      color:var(--accent2);
+    }
     @media(max-width:700px){
       .nav-links{position:absolute;right:0;top:100%;background:var(--primary);flex-direction:column;width:200px;}
     }
@@ -40,33 +58,26 @@
 <body>
   <header>
     <div class="logo">
-      <img src="logo/USFWS Logo.jpg.webp" alt="USFWS logo">
       The Leaky Wader
     </div>
-    <nav>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="newsletter.html">Newsletter</a></li>
-        <li><a href="data.html">Data</a></li>
-        <li><a href="reports.html">Reports</a></li>
-      </ul>
-    </nav>
+    <!-- navigation removed on the home page -->
   </header>
   <main>
     <h1>Welcome</h1>
     <p>Select a section below to begin.</p>
     <div class="card-container">
       <a href="newsletter.html" class="card">
-        <img src="logo/USFWS Logo.jpg.webp" alt="Newsletter">
+        <img src="May2025/steelhead_2.jpg" alt="Newsletter">
         <h2>Newsletter</h2>
         <p>Monthly updates and stories</p>
       </a>
       <a href="data.html" class="card">
-        <img src="logo/USFWS Logo.jpg.webp" alt="Data dashboard">
+        <img src="DecJan2025/Acoustic_DEC.png" alt="Data dashboard">
         <h2>Data</h2>
         <p>Program metrics and charts</p>
       </a>
       <a href="reports.html" class="card">
-        <img src="logo/USFWS Logo.jpg.webp" alt="Reports">
+        <img src="April2025/PIT.jpg" alt="Reports">
         <h2>Reports</h2>
         <p>Detailed reports and findings</p>
       </a>
