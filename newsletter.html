@@ -19,12 +19,13 @@
       --highlight:#000000;
     }
     body{margin:0;font-family:'Newsreader',serif;background:#a0acbd;color:#000;display:flex;flex-direction:column;min-height:100vh;opacity:0;transition:opacity 0.5s ease-in-out;}
+    html{background:#a0acbd;}
     body.fade-in{opacity:1;}
     body.fade-out{opacity:0;}
-    header{background:var(--primary);color:var(--neutral-light);display:flex;align-items:center;justify-content:space-between;padding:0.5em 1em;}
+    header{background:#4c7eb0;color:var(--neutral-light);display:flex;align-items:center;justify-content:space-between;padding:0.5em 1em;}
+    nav{background:#4c7eb0;position:relative;}
     header .logo{display:flex;align-items:center;font-weight:700;font-size:1.4rem;}
     header .logo img{height:40px;margin-right:0.5em;}
-    nav{position:relative;}
     .nav-links{list-style:none;display:flex;margin:0;padding:0;}
     .nav-links li{position:relative;}
     .nav-links>li>a{display:block;padding:0.5em 1em;color:var(--neutral-light);text-decoration:none;}
@@ -40,8 +41,8 @@
     .hero{
       padding:3em 1em;
       text-align:center;
-      background:var(--primary);
-      color:var(--neutral-light);
+      background:#a0acbd;
+      color:#000;
     }
     .hero h1{
       font-family:Helvetica,Arial,sans-serif;
