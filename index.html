@@ -103,20 +103,6 @@
     </h1>
     <a href="home.html" class="cta">Enter</a>
   </div>
-  <script>
-    document.addEventListener('DOMContentLoaded', function(){
-      document.body.classList.add('fade-in');
-      document.querySelectorAll('a').forEach(function(link){
-        const href = link.getAttribute('href');
-        if(!href || href.startsWith('#') || link.target === '_blank') return;
-        link.addEventListener('click', function(e){
-          e.preventDefault();
-          document.body.classList.remove('fade-in');
-          document.body.classList.add('fade-out');
-          setTimeout(function(){ window.location.href = href; }, 300);
-        });
-      });
-    });
-  </script>
+  <script src="fade.js"></script>
 </body>
 </html>

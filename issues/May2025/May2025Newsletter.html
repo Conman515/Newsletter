@@ -215,25 +215,13 @@
     </div>
 
   </td></tr></table>
+  <script src="../fade.js"></script>
   <script>
     const menuBtn = document.getElementById('menuBtn');
     const menuItems = document.getElementById('menuItems');
     menuBtn.addEventListener('click', function(){
       menuItems.classList.toggle('show');
       menuBtn.innerHTML = menuItems.classList.contains('show') ? '&#10006;' : '&#9776;';
-    });
-    document.addEventListener('DOMContentLoaded', function(){
-      document.body.classList.add('fade-in');
-      document.querySelectorAll('a').forEach(function(link){
-        const href = link.getAttribute('href');
-        if(!href || href.startsWith('#') || link.target === '_blank') return;
-        link.addEventListener('click', function(e){
-          e.preventDefault();
-          document.body.classList.remove('fade-in');
-          document.body.classList.add('fade-out');
-          setTimeout(function(){ window.location.href = href; }, 300);
-        });
-      });
     });
   </script>
   <footer>Created by <a href="https://conman515.github.io/ConnorCunningham_CV/">Connor Cunningham</a> 2025</footer>
