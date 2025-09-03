@@ -19,6 +19,17 @@ All links use relative paths so you can drop these files onto any web server or 
 1. Create a folder in `issues/` named for the issue (e.g. `Jan2026`).
 2. Add your HTML file and any images used by that issue inside the folder.
 3. Update `newsletter.html` to link to the new issue.
+4. Run `python3 track_uploads.py` to record the new issue in `upload_history.json`.
+
+## Tracking uploaded issues
+
+The `track_uploads.py` script helps avoid re-uploading the same newsletter files. It compares the HTML files in `issues/` against the list saved in `upload_history.json` and reports anything new.
+
+```bash
+python3 track_uploads.py
+```
+
+Running the script updates `upload_history.json` with any newly detected issue files so future runs only report untracked files.
 
 ## Local development
 
@@ -34,4 +45,3 @@ Then visit [http://localhost:8000](http://localhost:8000) and click around!
 ---
 
 Happy wading!
-
