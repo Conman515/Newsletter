@@ -1,10 +1,12 @@
 :root {
   --font-heading: 'Playfair Display', serif;
   --font-body: 'Source Sans 3', sans-serif;
-  --bg-gradient: linear-gradient(180deg, #f7f9fc, #eef2f7);
+  --bg-gradient: radial-gradient(circle at 10% 20%, #fbe8d3 0%, #f0f7fb 55%, #e1ecf6 100%);
   --navy-900: #1f2c3d;
   --navy-700: #2c3e55;
   --navy-500: #3f526b;
+  --seafoam-500: #3aa7a3;
+  --copper-600: #b86434;
   --copper-500: #c37a47;
   --copper-300: #dba676;
   --copper-200: #f0d9c6;
@@ -34,6 +36,8 @@ body {
   box-sizing: border-box;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
+  position: relative;
+  overflow: hidden;
 }
 
 body.fade-in {
@@ -52,10 +56,39 @@ body.fade-out {
   flex-direction: column;
   gap: clamp(1.5rem, 3vw, 2.5rem);
   flex: 1;
+  min-height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+body::before,
+body::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.55;
+  z-index: 0;
+}
+
+body::before {
+  width: 420px;
+  height: 420px;
+  background: rgba(58, 167, 163, 0.35);
+  top: -160px;
+  right: -140px;
+}
+
+body::after {
+  width: 360px;
+  height: 360px;
+  background: rgba(195, 122, 71, 0.4);
+  bottom: -120px;
+  left: -150px;
 }
 
 header {
-  background: radial-gradient(circle at top left, rgba(31, 44, 61, 0.85), rgba(31, 44, 61, 0.55));
+  background: linear-gradient(135deg, rgba(58, 167, 163, 0.9), rgba(31, 44, 61, 0.9) 55%, rgba(182, 100, 52, 0.9));
   color: var(--surface);
   display: flex;
   align-items: center;
@@ -99,14 +132,15 @@ nav {
 .nav-links > li > a,
 .submenu-header > a {
   display: block;
-  padding: 0.6em 1.1em;
+  padding: 0.65em 1.2em;
   border-radius: 999px;
-  color: rgba(255, 255, 255, 0.92);
+  color: rgba(255, 255, 255, 0.94);
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   font-weight: 600;
   transition: color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .nav-links > li > a:hover,
@@ -115,10 +149,10 @@ nav {
 .submenu-header > a:focus-visible,
 .submenu-toggle:hover,
 .submenu-toggle:focus-visible {
-  color: var(--copper-200);
-  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  background: linear-gradient(135deg, rgba(219, 166, 118, 0.45), rgba(58, 167, 163, 0.5));
   outline: none;
-  box-shadow: 0 8px 18px rgba(219, 166, 118, 0.25);
+  box-shadow: 0 12px 22px rgba(31, 44, 61, 0.3);
 }
 
 .submenu-header {
@@ -171,7 +205,7 @@ nav {
   position: absolute;
   left: 0;
   top: 100%;
-  background: rgba(31, 44, 61, 0.95);
+  background: linear-gradient(160deg, rgba(31, 44, 61, 0.95), rgba(58, 167, 163, 0.92));
   list-style: none;
   padding: 0.5em;
   margin: 0;
@@ -268,19 +302,23 @@ nav {
 }
 
 main {
-  background: var(--surface);
-  border-radius: 28px;
-  box-shadow: var(--shadow-soft);
-  padding: clamp(2.5rem, 5vw, 3.5rem) clamp(1.5rem, 4vw, 3.5rem);
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.92), rgba(235, 245, 249, 0.88));
+  border-radius: 32px;
+  box-shadow: 0 35px 60px rgba(31, 44, 61, 0.14);
+  padding: clamp(2.5rem, 5vw, 4rem) clamp(1.5rem, 4vw, 4rem);
   display: flex;
   flex-direction: column;
   gap: clamp(2rem, 4vw, 3rem);
+  position: relative;
+  overflow: hidden;
 }
 
 footer {
   text-align: center;
   color: var(--text-muted);
   font-size: 0.95rem;
+  margin-top: auto;
+  padding: 0.75rem 0 0.25rem;
 }
 
 footer a {
