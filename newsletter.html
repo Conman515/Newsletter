@@ -9,432 +9,331 @@
   <meta property="og:image" content="assets/logo/usfws-logo.webp">
   <meta property="og:type" content="website">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles/base.css">
   <style>
-    :root{
-      --primary:#4c7eb0;
-      --secondary:#FFFFFF;
-      --accent1:#e09f1f;
-      --accent2:#FFFFFF;
-      --neutral-light:#d9f3ff;
-      --highlight:#000000;
-      --space-1:0.25rem;
-      --space-2:0.5rem;
-      --space-3:0.75rem;
-      --space-4:1rem;
-      --space-5:1.25rem;
-      --space-6:1.75rem;
-      --radius-lg:18px;
-      --shadow-soft:0 18px 40px -22px rgba(31,53,76,0.4);
-      --shadow-hover:0 26px 44px -18px rgba(26,45,70,0.55);
-      --gradient-border:linear-gradient(135deg, rgba(76,126,176,0.85), rgba(224,159,31,0.9));
-      --font-heading:'Playfair Display',serif;
-      --font-body:'Source Sans 3',sans-serif;
+    main {
+      gap: clamp(2rem, 4vw, 3rem);
     }
-    body{margin:0;font-family:var(--font-body);background:#a0acbd;color:#000;display:flex;flex-direction:column;min-height:100vh;opacity:0;transition:opacity 0.5s ease-in-out;}
-    html{background:#a0acbd;}
-    body.fade-in{opacity:1;}
-    body.fade-out{opacity:0;}
-    header{
-      background:linear-gradient(90deg, var(--primary), var(--accent1));
-      color:var(--neutral-light);
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      padding:0.5em 1em;
-      box-shadow:0 2px 4px rgba(0,0,0,0.15);
+
+    .hero {
+      position: relative;
+      min-height: 50vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: clamp(3rem, 6vw, 5rem) clamp(1.5rem, 4vw, 3rem);
+      text-align: center;
+      border-radius: 24px;
+      overflow: hidden;
+      color: #fff;
+      background: url('issues/October2025/Keechelus-Picket-Weir.JPG') center / cover no-repeat;
+      box-shadow: var(--shadow-elevated);
+      isolation: isolate;
     }
-    nav{background:none;position:relative;}
-    header .logo{display:flex;align-items:center;font-weight:700;font-size:1.75rem;font-family:var(--font-heading);letter-spacing:-0.02em;}
-    header .logo img{height:40px;margin-right:0.5em;}
-    .nav-links{list-style:none;display:flex;margin:0;padding:0;align-items:center;}
-    .nav-links li{position:relative;}
-    .nav-links>li>a,.submenu-header>a{display:block;padding:0.5em 1em;color:var(--neutral-light);text-decoration:none;background:none;border:none;text-align:left;transition:background 0.3s,color 0.3s;font-family:var(--font-body);text-transform:uppercase;letter-spacing:0.08em;font-weight:600;}
-    .nav-links>li>a:focus,.nav-links>li>a:hover,.submenu-header>a:focus,.submenu-header>a:hover,.submenu-toggle:focus,.submenu-toggle:hover{background:rgba(255,255,255,0.1);color:var(--accent2);}
-    .submenu-header{display:flex;align-items:center;}
-    .submenu-header>a{flex:1;}
-    .submenu-toggle{display:flex;align-items:center;justify-content:center;background:none;border:none;color:var(--neutral-light);padding:0.5em 0.75em;cursor:pointer;transition:background 0.3s,color 0.3s;font-family:var(--font-body);text-transform:uppercase;letter-spacing:0.08em;font-weight:600;}
-      --bg-gradient: linear-gradient(180deg,#f7f9fc,#eef2f7);
-      --navy-900:#1f2c3d;
-      --navy-700:#2c3e55;
-      --navy-500:#3f526b;
-      --navy-200:#d5dde8;
-      --copper-500:#c37a47;
-      --copper-300:#dba676;
-      --copper-200:#f0d9c6;
-      --surface:#ffffff;
-      --surface-soft:rgba(255,255,255,0.82);
-      --shadow-soft:0 25px 55px rgba(31,44,61,0.12);
-      --focus-ring:0 0 0 3px rgba(219,166,118,0.5);
-      --text-muted:#5a6c7f;
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(125deg, rgba(10, 23, 46, 0.86) 0%, rgba(10, 23, 46, 0.55) 60%, rgba(10, 23, 46, 0.75) 100%);
+      z-index: -1;
     }
-    html{height:100%;background:var(--bg-gradient);}
-    body{margin:0;font-family:'Newsreader',serif;background:var(--bg-gradient);color:var(--navy-900);display:flex;justify-content:center;align-items:stretch;min-height:100vh;opacity:0;transition:opacity 0.5s ease-in-out;padding:clamp(1.5rem,4vw,3rem) clamp(1.5rem,4vw,3rem);box-sizing:border-box;}
-    body.fade-in{opacity:1;}
-    body.fade-out{opacity:0;}
-    .page-shell{width:100%;max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(1.5rem,3vw,2.5rem);}
-    header{background:radial-gradient(circle at top left,rgba(31,44,61,0.85),rgba(31,44,61,0.55));color:var(--surface);display:flex;align-items:center;justify-content:space-between;padding:1rem clamp(1.25rem,3vw,2rem);border-radius:20px;border:1px solid rgba(255,255,255,0.35);box-shadow:0 22px 45px rgba(31,44,61,0.18);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);position:relative;}
-    header .logo{display:flex;align-items:center;font-weight:700;font-size:1.6rem;letter-spacing:0.02em;}
-    nav{position:relative;}
-    .nav-links{list-style:none;display:flex;margin:0;padding:0;align-items:center;gap:0.25rem;}
-    .nav-links li{position:relative;}
-    .nav-links>li>a,.submenu-header>a{display:block;padding:0.6em 1.1em;border-radius:999px;color:rgba(255,255,255,0.92);text-decoration:none;transition:color 0.3s ease,background 0.3s ease,box-shadow 0.3s ease;}
-    .nav-links>li>a:hover,.nav-links>li>a:focus-visible,.submenu-header>a:hover,.submenu-header>a:focus-visible,.submenu-toggle:hover,.submenu-toggle:focus-visible{color:var(--copper-200);background:rgba(255,255,255,0.12);outline:none;box-shadow:0 8px 18px rgba(219,166,118,0.25);}
-    .submenu-header{display:flex;align-items:center;}
-    .submenu-header>a{flex:1;}
-    .submenu-toggle{display:flex;align-items:center;justify-content:center;background:transparent;border:none;color:rgba(255,255,255,0.92);padding:0.6em 0.75em;margin-left:0.25rem;border-radius:999px;cursor:pointer;transition:color 0.3s ease,background 0.3s ease,box-shadow 0.3s ease;}
-    .submenu-toggle .chevron{font-size:0.75rem;transition:transform 0.3s ease;}
-    .submenu-toggle[aria-expanded="true"] .chevron{transform:rotate(180deg);}
-    .hamburger{display:none;flex-direction:column;cursor:pointer;gap:6px;}
-    .hamburger span{height:3px;width:26px;border-radius:999px;background:rgba(255,255,255,0.92);}
-    .submenu{position:absolute;left:0;top:100%;background:rgba(31,44,61,0.95);list-style:none;padding:0.5em;margin:0;min-width:230px;border-radius:18px;border:1px solid rgba(195,122,71,0.35);box-shadow:0 18px 32px rgba(31,44,61,0.28);display:none;backdrop-filter:blur(6px);}
-    .submenu li a{display:block;padding:0.55em 1.1em;border-radius:12px;color:rgba(255,255,255,0.9);text-decoration:none;font-size:0.95rem;transition:background 0.3s ease,color 0.3s ease;}
-    .submenu li a:hover,.submenu li a:focus-visible{background:rgba(195,122,71,0.22);color:#fff;outline:none;}
-    .submenu.show{display:block;}
-    @media(min-width:701px){.has-submenu:hover .submenu{display:block;}}
-    @media(max-width:700px){
-      header{align-items:flex-start;}
-      nav{width:100%;}
-      .nav-links{position:absolute;right:0;top:calc(100% + 0.5rem);background:rgba(31,44,61,0.97);flex-direction:column;width:min(260px,90vw);display:none;border-radius:20px;padding:0.75rem;border:1px solid rgba(195,122,71,0.3);box-shadow:0 18px 32px rgba(31,44,61,0.28);}
-      .nav-links.show{display:flex;}
-      .nav-links>li>a,.submenu-header>a{width:100%;border-radius:14px;text-align:left;}
-      .submenu{position:static;width:100%;padding:0.4rem;margin-top:0.25rem;border-radius:14px;border:1px solid rgba(195,122,71,0.2);box-shadow:none;}
-      .submenu li a{padding-left:2.1em;}
-      .submenu-toggle{margin-left:auto;}
-      .hamburger{display:flex;margin-top:0.5rem;}
+
+    .hero__content {
+      position: relative;
+      z-index: 1;
+      max-width: 780px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
     }
-    main{flex:1;background:var(--surface);border-radius:28px;box-shadow:var(--shadow-soft);padding:clamp(2.75rem,5vw,3.75rem) clamp(1.5rem,4vw,3.75rem);display:flex;flex-direction:column;gap:clamp(2rem,4vw,2.75rem);text-align:center;}
-    .hero{display:flex;flex-direction:column;align-items:center;gap:1.5rem;}
-    .hero h1{margin:0;font-size:clamp(2.75rem,5vw,3.5rem);color:var(--navy-900);}
-    .hero p{margin:0 auto;max-width:680px;font-size:1.25rem;line-height:1.6;color:var(--text-muted);}
-    .issue-grid{display:flex;flex-wrap:wrap;gap:24px;justify-content:center;}
-    .issue-card{background:linear-gradient(180deg,#ffffff,rgba(242,246,252,0.92));color:var(--navy-700);text-decoration:none;border-radius:20px;overflow:hidden;box-shadow:0 14px 30px rgba(31,44,61,0.12);transition:transform 0.3s ease,box-shadow 0.3s ease;border:1px solid rgba(60,80,105,0.08);width:230px;padding:1.25em;display:flex;flex-direction:column;gap:0.85rem;align-items:center;}
-    .issue-card img{width:100%;height:140px;object-fit:cover;border-radius:14px;}
-    .issue-card span{margin:0;font-weight:600;font-size:1.45rem;color:var(--navy-900);text-align:center;}
-    .issue-card:hover{transform:translateY(-6px);box-shadow:0 24px 40px rgba(195,122,71,0.28);}
-      .submenu{position:static;box-shadow:none;border-radius:0;padding:0;}
-      .submenu li a{padding-left:2.5em;}
-      .submenu-header{width:100%;}
-      .submenu-toggle{margin-left:auto;padding:0.5em 1em;}
-      .hamburger{display:flex;}
+
+    .hero__eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.7);
     }
-    main{flex:1;display:flex;flex-direction:column;}
-    .hero{
-      position:relative;
-      min-height:60vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:6rem 1.5rem;
-      text-align:center;
-      background:url('issues/October2025/Keechelus-Picket-Weir.JPG') center/cover no-repeat;
-      color:#fff;
-      overflow:hidden;
+
+    .hero h1 {
+      margin: 0;
+      font-family: var(--font-heading);
+      font-size: clamp(2.75rem, 5vw, 3.75rem);
+      letter-spacing: -0.02em;
     }
-    .hero::before{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:linear-gradient(125deg, rgba(10,23,46,0.86) 0%, rgba(10,23,46,0.55) 60%, rgba(10,23,46,0.75) 100%);
+
+    .hero p {
+      margin: 0;
+      font-size: 1.35rem;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.85);
     }
-    .hero__content{
-      position:relative;
-      z-index:1;
-      max-width:780px;
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      gap:1.75rem;
+
+    .hero__cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
     }
-    .hero__eyebrow{
-      text-transform:uppercase;
-      letter-spacing:0.25em;
-      font-size:0.85rem;
-      color:rgba(255,255,255,0.7);
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.9em 2.6em;
+      border-radius: 999px;
+      font-size: 1.05rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+      box-shadow: 0 18px 34px rgba(0, 0, 0, 0.25);
     }
-    .hero h1{
-      font-family:var(--font-heading);
-      margin-bottom:0.5em;
-      font-size:3.75rem;
-      line-height:1.2;
-      font-weight:700;
-      letter-spacing:-0.02em;
+
+    .btn-primary {
+      background: rgba(224, 159, 31, 0.95);
+      color: #0a172e;
     }
-    .hero p{
-      margin-bottom:2em;
-      font-size:1.35rem;
-      line-height:1.6;
-      font-weight:400;
-      font-family:var(--font-body);
-      font-family:Helvetica,Arial,sans-serif;
-      margin:0;
-      font-size:3.5rem;
-      line-height:1.1;
-      font-weight:700;
-      text-shadow:0 10px 24px rgba(0,0,0,0.4);
+
+    .btn-secondary {
+      background: rgba(76, 126, 176, 0.85);
+      color: #fff;
     }
-    .hero p{
-      margin:0;
-      font-size:1.4rem;
-      line-height:1.7;
-      color:rgba(255,255,255,0.85);
-      text-shadow:0 6px 16px rgba(0,0,0,0.4);
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 22px 36px rgba(0, 0, 0, 0.35);
     }
-    .issue-grid{display:flex;flex-wrap:wrap;gap:var(--space-5);justify-content:center;margin-top:2em;}
-    .hero__cta{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;}
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding:0.9em 2.6em;
-      border-radius:999px;
-      font-size:1.05rem;
-      letter-spacing:0.05em;
-      text-transform:uppercase;
-      text-decoration:none;
-      transition:transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-      box-shadow:0 18px 34px rgba(0,0,0,0.25);
+
+    .page-section {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      text-align: center;
     }
-    .btn-primary{background:rgba(224,159,31,0.95);color:#0a172e;}
-    .btn-secondary{background:rgba(76,126,176,0.85);color:#fff;}
-    .btn:hover{transform:translateY(-3px);box-shadow:0 22px 36px rgba(0,0,0,0.35);}
-    .page-section{padding:4.5rem 1.5rem 5.5rem;text-align:center;}
-    .section-intro{max-width:720px;margin:0 auto 3rem;}
-    .section-intro h2{font-size:2.5rem;margin-bottom:0.75rem;font-weight:700;}
-    .section-intro p{font-size:1.2rem;line-height:1.7;margin:0;color:#1f2a38;}
-    .issue-grid{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;}
-    .issue-card{
-      background:linear-gradient(#ffffff,#ffffff) padding-box,var(--gradient-border) border-box;
-      color:var(--primary);
-      text-decoration:none;
-      border-radius:var(--radius-lg);
-      overflow:hidden;
-      box-shadow:var(--shadow-soft);
-      transition:transform 0.35s ease, box-shadow 0.35s ease;
-      width:240px;
-      max-width:100%;
-      padding:var(--space-5);
-      border:1px solid transparent;
-      display:flex;
-      flex-direction:column;
-      gap:var(--space-4);
-      align-items:flex-start;
-      text-align:left;
-      position:relative;
-      isolation:isolate;
-      transform:translateY(0);
+
+    .section-intro {
+      max-width: 720px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
     }
-    .issue-card::before{
-      content:attr(data-label);
-      font-variant:small-caps;
-      letter-spacing:0.22em;
-      font-size:0.75rem;
-      color:rgba(76,126,176,0.75);
-      display:block;
-      margin-bottom:var(--space-2);
+
+    .section-intro h2 {
+      margin: 0;
+      font-size: clamp(2rem, 4vw, 2.5rem);
+      font-family: var(--font-heading);
+      color: var(--navy-900);
     }
-    .issue-card img{width:100%;height:140px;object-fit:cover;border-radius:12px;transition:transform 0.45s ease;box-shadow:0 10px 30px -20px rgba(15,30,45,0.35);}
-    .issue-card span{
-      margin:0;
-      font-weight:600;
-      font-size:1.45rem;
-      line-height:1.35;
-      position:relative;
-      padding-bottom:var(--space-2);
-      display:inline-block;
+
+    .section-intro p {
+      margin: 0;
+      font-size: 1.15rem;
+      line-height: 1.7;
+      color: var(--text-muted);
     }
-    .issue-card span::after{
-      content:"";
-      position:absolute;
-      left:0;
-      bottom:0;
-      width:100%;
-      height:3px;
-      background:linear-gradient(90deg,var(--accent1),var(--primary));
-      transform:scaleX(0);
-      transform-origin:left;
-      transition:transform 0.35s ease;
-      opacity:0.85;
+
+    .issue-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      justify-content: center;
     }
-    .issue-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-hover);}
-    .issue-card:hover img{transform:scale(1.05);}
-    .issue-card:hover span::after{transform:scaleX(1);}
-    @media(max-width:600px){
-      .issue-card{flex-basis:100%;width:100%;padding:var(--space-6);}
-      .issue-card span{font-size:1.35rem;}
-      .hero h1{font-size:45px;}
-      .hero p{font-size:24px;}
-      margin-top:0.5em;
-      font-weight:500;
-      font-size:1.6rem;
-      line-height:1.4;
-      font-family:var(--font-heading);
-      letter-spacing:-0.01em;
+
+    .issue-card {
+      background: linear-gradient(180deg, #ffffff, rgba(242, 246, 252, 0.92));
+      color: var(--navy-700);
+      text-decoration: none;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 14px 30px rgba(31, 44, 61, 0.12);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid rgba(60, 80, 105, 0.08);
+      width: 230px;
+      padding: 1.25em;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+      align-items: center;
     }
-    .issue-card:hover{transform:translateY(-5px);box-shadow:0 4px 12px var(--accent1);}
-    @media(max-width:900px){
-      .hero{padding:5rem 1.5rem;}
-      .hero h1{font-size:2.75rem;}
-      .hero p{font-size:1.25rem;}
+
+    .issue-card img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 14px;
     }
-    @media(max-width:600px){
-      .hero{justify-content:flex-start;padding:4rem 1.25rem 3rem;text-align:center;}
-      .hero__content{gap:1.5rem;}
-      .hero h1{font-size:2.3rem;}
-      .hero p{font-size:1.1rem;}
-      .hero__cta{flex-direction:column;}
-      .btn{width:100%;padding:0.85em 1.5em;font-size:1rem;}
-      .page-section{padding:3.5rem 1rem 4rem;}
-      .issue-card{flex-basis:100%;width:100%;}
-      .issue-card span{font-size:1.35rem;}
-      .hero h1{font-size:2.25rem;}
-      .hero p{font-size:1rem;}
-      .hero h1{font-size:2.35rem;}
-      .hero p{font-size:1.1rem;}
-      .issue-card span{font-size:1.5em;}
+
+    .issue-card span {
+      font-weight: 600;
+      font-size: 1.35rem;
+      color: var(--navy-900);
     }
-    footer{text-align:center;color:var(--text-muted);font-size:0.95rem;}
-    footer a{color:var(--navy-700);text-decoration:none;font-weight:600;}
-    footer a:hover,footer a:focus-visible{color:var(--copper-500);outline:none;}
+
+    .issue-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 40px rgba(195, 122, 71, 0.28);
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        padding: 4.5rem 1.75rem;
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero {
+        justify-content: flex-start;
+        padding: 3.5rem 1.25rem 3rem;
+      }
+
+      .hero__content {
+        gap: 1.25rem;
+      }
+
+      .hero h1 {
+        font-size: 2.35rem;
+      }
+
+      .hero p {
+        font-size: 1.1rem;
+      }
+
+      .hero__cta {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+        padding: 0.85em 1.5em;
+        font-size: 1rem;
+      }
+
+      .issue-card {
+        width: 100%;
+        max-width: 320px;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="page-shell">
-  <header>
-    <div class="logo">
-      The Leaky Wader
-    </div>
-    <div class="hamburger" id="hamburger">
-      <span></span><span></span><span></span>
-    </div>
-    <nav>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="home.html">Home</a></li>
-        <li class="has-submenu">
-          <div class="submenu-header">
-            <a href="newsletter.html">Newsletter</a>
-            <button class="submenu-toggle" aria-expanded="false" aria-label="Toggle Newsletter submenu">
-              <span class="chevron" aria-hidden="true">&#9662;</span>
-            </button>
+    <header>
+      <div class="logo">
+        The Leaky Wader
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+      <nav>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="home.html">Home</a></li>
+          <li class="has-submenu">
+            <div class="submenu-header">
+              <a href="newsletter.html">Newsletter</a>
+              <button class="submenu-toggle" aria-expanded="false" aria-label="Toggle Newsletter submenu">
+                <span class="chevron" aria-hidden="true">&#9662;</span>
+              </button>
+            </div>
+            <ul class="submenu">
+              <li><a href="issues/DecJan2025/DecJan2025Newsletter.html">Dec 2024 &ndash; Jan 2025</a></li>
+              <li><a href="issues/April2025/MarchApril2025Newsletter.html">Mar &ndash; Apr 2025</a></li>
+              <li><a href="issues/May2025/May2025Newsletter.html">May 2025</a></li>
+              <li><a href="issues/June2025/June2025Newsletter.html">June 2025</a></li>
+              <li><a href="issues/August2025/JulyAugust2025Newsletter.html">Jul &ndash; Aug 2025</a></li>
+              <li><a href="issues/October2025/SeptemberOctober2025Newsletter.html">Sep &ndash; Oct 2025</a></li>
+            </ul>
+          </li>
+          <li><a href="reports.html">Reports</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="hero__content">
+          <span class="hero__eyebrow">Monthly field dispatch</span>
+          <h1>Yakima Newsletter &ndash; 2025</h1>
+          <p>Catch up on hatchery news, habitat projects, and field notes from the Yakima River Basin&mdash;all curated by the team on the water.</p>
+          <div class="hero__cta">
+            <a class="btn btn-primary" href="issues/October2025/SeptemberOctober2025Newsletter.html">Read latest issue</a>
+            <a class="btn btn-secondary" href="#issue-archive">Explore the archive</a>
           </div>
-          <ul class="submenu">
-            <li><a href="issues/DecJan2025/DecJan2025Newsletter.html">Dec 2024 &ndash; Jan 2025</a></li>
-            <li><a href="issues/April2025/MarchApril2025Newsletter.html">Mar &ndash; Apr 2025</a></li>
-            <li><a href="issues/May2025/May2025Newsletter.html">May 2025</a></li>
-            <li><a href="issues/June2025/June2025Newsletter.html">June 2025</a></li>
-            <li><a href="issues/August2025/JulyAugust2025Newsletter.html">Jul &ndash; Aug 2025</a></li>
-            <li><a href="issues/October2025/SeptemberOctober2025Newsletter.html">Sep &ndash; Oct 2025</a></li>
-          </ul>
-        </li>
-        <li><a href="reports.html">Reports</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <section class="hero">
-      <h1>Yakima Newsletter &ndash; 2025</h1>
-      <p>Select a month below to explore each issue.</p>
-    </section>
-    <div class="issue-grid">
-      <a class="issue-card" href="issues/DecJan2025/DecJan2025Newsletter.html" data-label="Issue">
-        <img loading="lazy" src="issues/DecJan2025/Steelhead_DEC.png" alt="Dec - Jan 2025">
-        <span>Dec - Jan 2025</span>
-      </a>
-      <a class="issue-card" href="issues/April2025/MarchApril2025Newsletter.html" data-label="Issue">
-        <img loading="lazy" src="issues/April2025/CleElumNetting.JPG" alt="Mar - Apr 2025">
-        <span>Mar - Apr 2025</span>
-      </a>
-      <a class="issue-card" href="issues/May2025/May2025Newsletter.html" data-label="Issue">
-        <img loading="lazy" src="issues/May2025/eDNA.jpg" alt="May 2025">
-        <span>May 2025</span>
-      </a>
-      <a class="issue-card" href="issues/June2025/June2025Newsletter.html" data-label="Issue">
-        <img loading="lazy" src="issues/June2025/Gold-Creek-Pond.jpg" alt="June 2025">
-        <span>June 2025</span>
-      </a>
-      <a class="issue-card" href="issues/August2025/JulyAugust2025Newsletter.html" data-label="Issue">
-        <img loading="lazy" src="issues/August2025/Clear-Creek.jpg" alt="Jul - Aug 2025">
-        <span>Jul - Aug 2025</span>
-      </a>
-      <a class="issue-card" href="issues/October2025/SeptemberOctober2025Newsletter.html" data-label="Issue">
-        <img loading="lazy" src="issues/October2025/Keechelus-Picket-Weir.JPG" alt="Sep - Oct 2025">
-        <span>Sep - Oct 2025</span>
-      </a>
-    </div>
-      <div class="hero__content">
-        <span class="hero__eyebrow">Monthly field dispatch</span>
-        <h1>Yakima Newsletter &ndash; 2025</h1>
-        <p>Catch up on hatchery news, habitat projects, and field notes from the Yakima River Basin&mdash;all curated by the team on the water.</p>
-        <div class="hero__cta">
-          <a class="btn btn-primary" href="issues/October2025/SeptemberOctober2025Newsletter.html">Read latest issue</a>
-          <a class="btn btn-secondary" href="#issue-archive">Explore the archive</a>
         </div>
-      </div>
-    </section>
-    <section class="page-section" id="issue-archive">
-      <div class="section-intro">
-        <h2>Explore Past Issues</h2>
-        <p>Browse every 2025 volume to see how fisheries crews, biologists, and partners are restoring the Yakima watershed throughout the seasons.</p>
-      </div>
-      <div class="issue-grid">
-        <a class="issue-card" href="issues/DecJan2025/DecJan2025Newsletter.html">
-          <img loading="lazy" src="issues/DecJan2025/Steelhead_DEC.png" alt="Dec - Jan 2025">
-          <span>Dec - Jan 2025</span>
-        </a>
-        <a class="issue-card" href="issues/April2025/MarchApril2025Newsletter.html">
-          <img loading="lazy" src="issues/April2025/CleElumNetting.JPG" alt="Mar - Apr 2025">
-          <span>Mar - Apr 2025</span>
-        </a>
-        <a class="issue-card" href="issues/May2025/May2025Newsletter.html">
-          <img loading="lazy" src="issues/May2025/eDNA.jpg" alt="May 2025">
-          <span>May 2025</span>
-        </a>
-        <a class="issue-card" href="issues/June2025/June2025Newsletter.html">
-          <img loading="lazy" src="issues/June2025/Gold-Creek-Pond.jpg" alt="June 2025">
-          <span>June 2025</span>
-        </a>
-        <a class="issue-card" href="issues/August2025/JulyAugust2025Newsletter.html">
-          <img loading="lazy" src="issues/August2025/Clear-Creek.jpg" alt="Jul - Aug 2025">
-          <span>Jul - Aug 2025</span>
-        </a>
-        <a class="issue-card" href="issues/October2025/SeptemberOctober2025Newsletter.html">
-          <img loading="lazy" src="issues/October2025/Keechelus-Picket-Weir.JPG" alt="Sep - Oct 2025">
-          <span>Sep - Oct 2025</span>
-        </a>
-      </div>
-    </section>
-  </main>
-  <footer>Created by <a href="https://conman515.github.io/ConnorCunningham_CV/">Connor Cunningham</a> 2025</footer>
+      </section>
+      <section class="page-section" id="issue-archive">
+        <div class="section-intro">
+          <h2>Explore Past Issues</h2>
+          <p>Browse every 2025 volume to see how fisheries crews, biologists, and partners are restoring the Yakima watershed throughout the seasons.</p>
+        </div>
+        <div class="issue-grid">
+          <a class="issue-card" href="issues/DecJan2025/DecJan2025Newsletter.html">
+            <img loading="lazy" src="issues/DecJan2025/Steelhead_DEC.png" alt="Dec - Jan 2025">
+            <span>Dec - Jan 2025</span>
+          </a>
+          <a class="issue-card" href="issues/April2025/MarchApril2025Newsletter.html">
+            <img loading="lazy" src="issues/April2025/CleElumNetting.JPG" alt="Mar - Apr 2025">
+            <span>Mar - Apr 2025</span>
+          </a>
+          <a class="issue-card" href="issues/May2025/May2025Newsletter.html">
+            <img loading="lazy" src="issues/May2025/eDNA.jpg" alt="May 2025">
+            <span>May 2025</span>
+          </a>
+          <a class="issue-card" href="issues/June2025/June2025Newsletter.html">
+            <img loading="lazy" src="issues/June2025/Gold-Creek-Pond.jpg" alt="June 2025">
+            <span>June 2025</span>
+          </a>
+          <a class="issue-card" href="issues/August2025/JulyAugust2025Newsletter.html">
+            <img loading="lazy" src="issues/August2025/Clear-Creek.jpg" alt="Jul - Aug 2025">
+            <span>Jul - Aug 2025</span>
+          </a>
+          <a class="issue-card" href="issues/October2025/SeptemberOctober2025Newsletter.html">
+            <img loading="lazy" src="issues/October2025/Keechelus-Picket-Weir.JPG" alt="Sep - Oct 2025">
+            <span>Sep - Oct 2025</span>
+          </a>
+        </div>
+      </section>
+    </main>
+    <footer>Created by <a href="https://conman515.github.io/ConnorCunningham_CV/">Connor Cunningham</a> 2025</footer>
   </div>
   <script src="fade.js"></script>
   <script>
-    document.addEventListener('DOMContentLoaded', function(){
+    document.addEventListener('DOMContentLoaded', function() {
       const hamburger = document.getElementById('hamburger');
       const navLinks = document.getElementById('nav-links');
       const submenuToggles = document.querySelectorAll('.submenu-toggle');
-      if(hamburger){
-        hamburger.addEventListener('click', function(){
+
+      if (hamburger) {
+        hamburger.addEventListener('click', function() {
           navLinks.classList.toggle('show');
         });
       }
-      submenuToggles.forEach(function(toggle){
-        toggle.addEventListener('click', function(){
+
+      submenuToggles.forEach(function(toggle) {
+        toggle.addEventListener('click', function() {
           const parentItem = toggle.closest('.has-submenu');
           const submenu = parentItem ? parentItem.querySelector('.submenu') : null;
           const expanded = toggle.getAttribute('aria-expanded') === 'true';
           toggle.setAttribute('aria-expanded', String(!expanded));
-          if(submenu){
+          if (submenu) {
             submenu.classList.toggle('show', !expanded);
           }
         });
       });
-      document.querySelectorAll('.nav-links a').forEach(function(link){
-        link.addEventListener('click', function(){
+
+      document.querySelectorAll('.nav-links a').forEach(function(link) {
+        link.addEventListener('click', function() {
           navLinks.classList.remove('show');
-          submenuToggles.forEach(function(toggle){
+          submenuToggles.forEach(function(toggle) {
             toggle.setAttribute('aria-expanded', 'false');
             const parentItem = toggle.closest('.has-submenu');
             const submenu = parentItem ? parentItem.querySelector('.submenu') : null;
-            if(submenu){
+            if (submenu) {
               submenu.classList.remove('show');
             }
           });
