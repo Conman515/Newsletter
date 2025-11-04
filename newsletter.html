@@ -59,27 +59,77 @@
       .submenu-toggle{margin-left:auto;padding:0.5em 1em;}
       .hamburger{display:flex;}
     }
-    main{flex:1;}
+    main{flex:1;display:flex;flex-direction:column;}
     .hero{
-      padding:3em 1em;
+      position:relative;
+      min-height:60vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:6rem 1.5rem;
       text-align:center;
-      background:#a0acbd;
-      color:#000;
+      background:url('issues/October2025/Keechelus-Picket-Weir.JPG') center/cover no-repeat;
+      color:#fff;
+      overflow:hidden;
+    }
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(125deg, rgba(10,23,46,0.86) 0%, rgba(10,23,46,0.55) 60%, rgba(10,23,46,0.75) 100%);
+    }
+    .hero__content{
+      position:relative;
+      z-index:1;
+      max-width:780px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:1.75rem;
+    }
+    .hero__eyebrow{
+      text-transform:uppercase;
+      letter-spacing:0.25em;
+      font-size:0.85rem;
+      color:rgba(255,255,255,0.7);
     }
     .hero h1{
       font-family:Helvetica,Arial,sans-serif;
-      margin-bottom:0.5em;
-      font-size:60px;
-      line-height:1.2;
+      margin:0;
+      font-size:3.5rem;
+      line-height:1.1;
       font-weight:700;
+      text-shadow:0 10px 24px rgba(0,0,0,0.4);
     }
     .hero p{
-      margin-bottom:2em;
-      font-size:27px;
-      line-height:1.6;
-      font-weight:400;
+      margin:0;
+      font-size:1.4rem;
+      line-height:1.7;
+      color:rgba(255,255,255,0.85);
+      text-shadow:0 6px 16px rgba(0,0,0,0.4);
     }
-    .issue-grid{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;margin-top:2em;}
+    .hero__cta{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;}
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:0.9em 2.6em;
+      border-radius:999px;
+      font-size:1.05rem;
+      letter-spacing:0.05em;
+      text-transform:uppercase;
+      text-decoration:none;
+      transition:transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+      box-shadow:0 18px 34px rgba(0,0,0,0.25);
+    }
+    .btn-primary{background:rgba(224,159,31,0.95);color:#0a172e;}
+    .btn-secondary{background:rgba(76,126,176,0.85);color:#fff;}
+    .btn:hover{transform:translateY(-3px);box-shadow:0 22px 36px rgba(0,0,0,0.35);}
+    .page-section{padding:4.5rem 1.5rem 5.5rem;text-align:center;}
+    .section-intro{max-width:720px;margin:0 auto 3rem;}
+    .section-intro h2{font-size:2.5rem;margin-bottom:0.75rem;font-weight:700;}
+    .section-intro p{font-size:1.2rem;line-height:1.7;margin:0;color:#1f2a38;}
+    .issue-grid{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;}
     .issue-card{
       background:var(--neutral-light);
       color:var(--primary);
@@ -102,11 +152,21 @@
       line-height:1.4;
     }
     .issue-card:hover{transform:translateY(-5px);box-shadow:0 4px 12px var(--accent1);}
+    @media(max-width:900px){
+      .hero{padding:5rem 1.5rem;}
+      .hero h1{font-size:2.75rem;}
+      .hero p{font-size:1.25rem;}
+    }
     @media(max-width:600px){
+      .hero{justify-content:flex-start;padding:4rem 1.25rem 3rem;text-align:center;}
+      .hero__content{gap:1.5rem;}
+      .hero h1{font-size:2.3rem;}
+      .hero p{font-size:1.1rem;}
+      .hero__cta{flex-direction:column;}
+      .btn{width:100%;padding:0.85em 1.5em;font-size:1rem;}
+      .page-section{padding:3.5rem 1rem 4rem;}
       .issue-card{flex-basis:100%;width:100%;}
       .issue-card span{font-size:1.5em;}
-      .hero h1{font-size:45px;}
-      .hero p{font-size:24px;}
     }
     footer{background:#4c7eb0;color:#d9f3ff;text-align:center;padding:0.5em 0;}
     footer a{color:orange;}
@@ -143,35 +203,50 @@
       </ul>
     </nav>
   </header>
-  <main class="hero">
-    <h1>Yakima Newsletter &ndash; 2025</h1>
-    <p>Select a month below to explore each issue.</p>
-    <div class="issue-grid">
-      <a class="issue-card" href="issues/DecJan2025/DecJan2025Newsletter.html">
-        <img loading="lazy" src="issues/DecJan2025/Steelhead_DEC.png" alt="Dec - Jan 2025">
-        <span>Dec - Jan 2025</span>
-      </a>
-      <a class="issue-card" href="issues/April2025/MarchApril2025Newsletter.html">
-        <img loading="lazy" src="issues/April2025/CleElumNetting.JPG" alt="Mar - Apr 2025">
-        <span>Mar - Apr 2025</span>
-      </a>
-      <a class="issue-card" href="issues/May2025/May2025Newsletter.html">
-        <img loading="lazy" src="issues/May2025/eDNA.jpg" alt="May 2025">
-        <span>May 2025</span>
-      </a>
-      <a class="issue-card" href="issues/June2025/June2025Newsletter.html">
-        <img loading="lazy" src="issues/June2025/Gold-Creek-Pond.jpg" alt="June 2025">
-        <span>June 2025</span>
-      </a>
-      <a class="issue-card" href="issues/August2025/JulyAugust2025Newsletter.html">
-        <img loading="lazy" src="issues/August2025/Clear-Creek.jpg" alt="Jul - Aug 2025">
-        <span>Jul - Aug 2025</span>
-      </a>
-      <a class="issue-card" href="issues/October2025/SeptemberOctober2025Newsletter.html">
-        <img loading="lazy" src="issues/October2025/Keechelus-Picket-Weir.JPG" alt="Sep - Oct 2025">
-        <span>Sep - Oct 2025</span>
-      </a>
-    </div>
+  <main>
+    <section class="hero">
+      <div class="hero__content">
+        <span class="hero__eyebrow">Monthly field dispatch</span>
+        <h1>Yakima Newsletter &ndash; 2025</h1>
+        <p>Catch up on hatchery news, habitat projects, and field notes from the Yakima River Basin&mdash;all curated by the team on the water.</p>
+        <div class="hero__cta">
+          <a class="btn btn-primary" href="issues/October2025/SeptemberOctober2025Newsletter.html">Read latest issue</a>
+          <a class="btn btn-secondary" href="#issue-archive">Explore the archive</a>
+        </div>
+      </div>
+    </section>
+    <section class="page-section" id="issue-archive">
+      <div class="section-intro">
+        <h2>Explore Past Issues</h2>
+        <p>Browse every 2025 volume to see how fisheries crews, biologists, and partners are restoring the Yakima watershed throughout the seasons.</p>
+      </div>
+      <div class="issue-grid">
+        <a class="issue-card" href="issues/DecJan2025/DecJan2025Newsletter.html">
+          <img loading="lazy" src="issues/DecJan2025/Steelhead_DEC.png" alt="Dec - Jan 2025">
+          <span>Dec - Jan 2025</span>
+        </a>
+        <a class="issue-card" href="issues/April2025/MarchApril2025Newsletter.html">
+          <img loading="lazy" src="issues/April2025/CleElumNetting.JPG" alt="Mar - Apr 2025">
+          <span>Mar - Apr 2025</span>
+        </a>
+        <a class="issue-card" href="issues/May2025/May2025Newsletter.html">
+          <img loading="lazy" src="issues/May2025/eDNA.jpg" alt="May 2025">
+          <span>May 2025</span>
+        </a>
+        <a class="issue-card" href="issues/June2025/June2025Newsletter.html">
+          <img loading="lazy" src="issues/June2025/Gold-Creek-Pond.jpg" alt="June 2025">
+          <span>June 2025</span>
+        </a>
+        <a class="issue-card" href="issues/August2025/JulyAugust2025Newsletter.html">
+          <img loading="lazy" src="issues/August2025/Clear-Creek.jpg" alt="Jul - Aug 2025">
+          <span>Jul - Aug 2025</span>
+        </a>
+        <a class="issue-card" href="issues/October2025/SeptemberOctober2025Newsletter.html">
+          <img loading="lazy" src="issues/October2025/Keechelus-Picket-Weir.JPG" alt="Sep - Oct 2025">
+          <span>Sep - Oct 2025</span>
+        </a>
+      </div>
+    </section>
   </main>
   <script src="fade.js"></script>
   <script>
