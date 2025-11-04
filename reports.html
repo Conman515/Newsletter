@@ -22,8 +22,13 @@
     nav{position:relative;}
     .nav-links{list-style:none;display:flex;margin:0;padding:0;align-items:center;}
     .nav-links li{position:relative;}
-    .nav-links>li>a,.submenu-toggle{display:block;padding:0.5em 1em;color:#d9f3ff;text-decoration:none;background:none;border:none;font:inherit;cursor:pointer;text-align:left;transition:background 0.3s,color 0.3s;}
-    .nav-links>li>a:focus,.nav-links>li>a:hover,.submenu-toggle:focus,.submenu-toggle:hover{background:rgba(255,255,255,0.1);color:var(--accent2);}
+    .nav-links>li>a,.submenu-header>a{display:block;padding:0.5em 1em;color:#d9f3ff;text-decoration:none;background:none;border:none;text-align:left;transition:background 0.3s,color 0.3s;}
+    .nav-links>li>a:focus,.nav-links>li>a:hover,.submenu-header>a:focus,.submenu-header>a:hover,.submenu-toggle:focus,.submenu-toggle:hover{background:rgba(255,255,255,0.1);color:var(--accent2);}
+    .submenu-header{display:flex;align-items:center;}
+    .submenu-header>a{flex:1;}
+    .submenu-toggle{display:flex;align-items:center;justify-content:center;background:none;border:none;color:#d9f3ff;padding:0.5em 0.75em;cursor:pointer;transition:background 0.3s,color 0.3s;}
+    .submenu-toggle .chevron{font-size:0.75rem;transition:transform 0.3s ease;}
+    .submenu-toggle[aria-expanded="true"] .chevron{transform:rotate(180deg);}
     .hamburger{display:none;flex-direction:column;cursor:pointer;}
     .hamburger span{height:3px;width:25px;background:#d9f3ff;margin:4px 0;}
     .submenu{position:absolute;left:0;top:100%;background:var(--primary);list-style:none;padding:0.5em 0;margin:0;min-width:210px;border-radius:6px;box-shadow:0 6px 16px rgba(0,0,0,0.18);display:none;}
@@ -36,6 +41,8 @@
       .nav-links.show{display:flex;}
       .submenu{position:static;box-shadow:none;border-radius:0;padding:0;}
       .submenu li a{padding-left:2.5em;}
+      .submenu-header{width:100%;}
+      .submenu-toggle{margin-left:auto;padding:0.5em 1em;}
       .hamburger{display:flex;}
     }
       .content{flex:1;text-align:center;padding:2em;}
@@ -61,16 +68,20 @@
     <nav>
       <ul class="nav-links" id="nav-links">
         <li><a href="home.html">Home</a></li>
-        <li><a href="newsletter.html">Newsletter</a></li>
         <li class="has-submenu">
-          <button class="submenu-toggle" aria-expanded="false">2025 Issues</button>
+          <div class="submenu-header">
+            <a href="newsletter.html">Newsletter</a>
+            <button class="submenu-toggle" aria-expanded="false" aria-label="Toggle Newsletter submenu">
+              <span class="chevron" aria-hidden="true">&#9662;</span>
+            </button>
+          </div>
           <ul class="submenu">
-            <li><a href="issues/October2025/SeptemberOctober2025Newsletter.html">Sep &ndash; Oct 2025</a></li>
-            <li><a href="issues/August2025/JulyAugust2025Newsletter.html">Jul &ndash; Aug 2025</a></li>
-            <li><a href="issues/June2025/June2025Newsletter.html">June 2025</a></li>
-            <li><a href="issues/May2025/May2025Newsletter.html">May 2025</a></li>
-            <li><a href="issues/April2025/MarchApril2025Newsletter.html">Mar &ndash; Apr 2025</a></li>
             <li><a href="issues/DecJan2025/DecJan2025Newsletter.html">Dec 2024 &ndash; Jan 2025</a></li>
+            <li><a href="issues/April2025/MarchApril2025Newsletter.html">Mar &ndash; Apr 2025</a></li>
+            <li><a href="issues/May2025/May2025Newsletter.html">May 2025</a></li>
+            <li><a href="issues/June2025/June2025Newsletter.html">June 2025</a></li>
+            <li><a href="issues/August2025/JulyAugust2025Newsletter.html">Jul &ndash; Aug 2025</a></li>
+            <li><a href="issues/October2025/SeptemberOctober2025Newsletter.html">Sep &ndash; Oct 2025</a></li>
           </ul>
         </li>
         <li><a href="reports.html">Reports</a></li>
@@ -98,11 +109,14 @@
         });
       }
       submenuToggles.forEach(function(toggle){
-        const submenu = toggle.nextElementSibling;
         toggle.addEventListener('click', function(){
+          const parentItem = toggle.closest('.has-submenu');
+          const submenu = parentItem ? parentItem.querySelector('.submenu') : null;
           const expanded = toggle.getAttribute('aria-expanded') === 'true';
           toggle.setAttribute('aria-expanded', String(!expanded));
-          submenu.classList.toggle('show', !expanded);
+          if(submenu){
+            submenu.classList.toggle('show', !expanded);
+          }
         });
       });
       document.querySelectorAll('.nav-links a').forEach(function(link){
@@ -110,8 +124,11 @@
           navLinks.classList.remove('show');
           submenuToggles.forEach(function(toggle){
             toggle.setAttribute('aria-expanded', 'false');
-            const submenu = toggle.nextElementSibling;
-            submenu.classList.remove('show');
+            const parentItem = toggle.closest('.has-submenu');
+            const submenu = parentItem ? parentItem.querySelector('.submenu') : null;
+            if(submenu){
+              submenu.classList.remove('show');
+            }
           });
         });
       });
