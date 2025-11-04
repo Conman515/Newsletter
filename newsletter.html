@@ -36,8 +36,13 @@
     header .logo img{height:40px;margin-right:0.5em;}
     .nav-links{list-style:none;display:flex;margin:0;padding:0;align-items:center;}
     .nav-links li{position:relative;}
-    .nav-links>li>a,.submenu-toggle{display:block;padding:0.5em 1em;color:var(--neutral-light);text-decoration:none;background:none;border:none;font:inherit;cursor:pointer;text-align:left;transition:background 0.3s,color 0.3s;}
-    .nav-links>li>a:focus,.nav-links>li>a:hover,.submenu-toggle:focus,.submenu-toggle:hover{background:rgba(255,255,255,0.1);color:var(--accent2);}
+    .nav-links>li>a,.submenu-header>a{display:block;padding:0.5em 1em;color:var(--neutral-light);text-decoration:none;background:none;border:none;text-align:left;transition:background 0.3s,color 0.3s;}
+    .nav-links>li>a:focus,.nav-links>li>a:hover,.submenu-header>a:focus,.submenu-header>a:hover,.submenu-toggle:focus,.submenu-toggle:hover{background:rgba(255,255,255,0.1);color:var(--accent2);}
+    .submenu-header{display:flex;align-items:center;}
+    .submenu-header>a{flex:1;}
+    .submenu-toggle{display:flex;align-items:center;justify-content:center;background:none;border:none;color:var(--neutral-light);padding:0.5em 0.75em;cursor:pointer;transition:background 0.3s,color 0.3s;}
+    .submenu-toggle .chevron{font-size:0.75rem;transition:transform 0.3s ease;}
+    .submenu-toggle[aria-expanded="true"] .chevron{transform:rotate(180deg);}
     .hamburger{display:none;flex-direction:column;cursor:pointer;}
     .hamburger span{height:3px;width:25px;background:var(--neutral-light);margin:4px 0;}
     .submenu{position:absolute;left:0;top:100%;background:var(--primary);list-style:none;padding:0.5em 0;margin:0;min-width:210px;border-radius:6px;box-shadow:0 6px 16px rgba(0,0,0,0.18);display:none;}
@@ -50,6 +55,8 @@
       .nav-links.show{display:flex;}
       .submenu{position:static;box-shadow:none;border-radius:0;padding:0;}
       .submenu li a{padding-left:2.5em;}
+      .submenu-header{width:100%;}
+      .submenu-toggle{margin-left:auto;padding:0.5em 1em;}
       .hamburger{display:flex;}
     }
     main{flex:1;}
@@ -116,16 +123,20 @@
     <nav>
       <ul class="nav-links" id="nav-links">
         <li><a href="home.html">Home</a></li>
-        <li><a href="newsletter.html">Newsletter</a></li>
         <li class="has-submenu">
-          <button class="submenu-toggle" aria-expanded="false">2025 Issues</button>
+          <div class="submenu-header">
+            <a href="newsletter.html">Newsletter</a>
+            <button class="submenu-toggle" aria-expanded="false" aria-label="Toggle Newsletter submenu">
+              <span class="chevron" aria-hidden="true">&#9662;</span>
+            </button>
+          </div>
           <ul class="submenu">
-            <li><a href="issues/October2025/SeptemberOctober2025Newsletter.html">Sep &ndash; Oct 2025</a></li>
-            <li><a href="issues/August2025/JulyAugust2025Newsletter.html">Jul &ndash; Aug 2025</a></li>
-            <li><a href="issues/June2025/June2025Newsletter.html">June 2025</a></li>
-            <li><a href="issues/May2025/May2025Newsletter.html">May 2025</a></li>
-            <li><a href="issues/April2025/MarchApril2025Newsletter.html">Mar &ndash; Apr 2025</a></li>
             <li><a href="issues/DecJan2025/DecJan2025Newsletter.html">Dec 2024 &ndash; Jan 2025</a></li>
+            <li><a href="issues/April2025/MarchApril2025Newsletter.html">Mar &ndash; Apr 2025</a></li>
+            <li><a href="issues/May2025/May2025Newsletter.html">May 2025</a></li>
+            <li><a href="issues/June2025/June2025Newsletter.html">June 2025</a></li>
+            <li><a href="issues/August2025/JulyAugust2025Newsletter.html">Jul &ndash; Aug 2025</a></li>
+            <li><a href="issues/October2025/SeptemberOctober2025Newsletter.html">Sep &ndash; Oct 2025</a></li>
           </ul>
         </li>
         <li><a href="reports.html">Reports</a></li>
@@ -136,29 +147,29 @@
     <h1>Yakima Newsletter &ndash; 2025</h1>
     <p>Select a month below to explore each issue.</p>
     <div class="issue-grid">
-      <a class="issue-card" href="issues/October2025/SeptemberOctober2025Newsletter.html">
-        <img loading="lazy" src="issues/October2025/Keechelus-Picket-Weir.JPG" alt="Sep - Oct 2025">
-        <span>Sep - Oct 2025</span>
-      </a>
-      <a class="issue-card" href="issues/August2025/JulyAugust2025Newsletter.html">
-        <img loading="lazy" src="issues/August2025/Clear-Creek.jpg" alt="Jul - Aug 2025">
-        <span>Jul - Aug 2025</span>
-      </a>
-      <a class="issue-card" href="issues/June2025/June2025Newsletter.html">
-        <img loading="lazy" src="issues/June2025/Gold-Creek-Pond.jpg" alt="June 2025">
-        <span>June 2025</span>
-      </a>
-      <a class="issue-card" href="issues/May2025/May2025Newsletter.html">
-        <img loading="lazy" src="issues/May2025/eDNA.jpg" alt="May 2025">
-        <span>May 2025</span>
+      <a class="issue-card" href="issues/DecJan2025/DecJan2025Newsletter.html">
+        <img loading="lazy" src="issues/DecJan2025/Steelhead_DEC.png" alt="Dec - Jan 2025">
+        <span>Dec - Jan 2025</span>
       </a>
       <a class="issue-card" href="issues/April2025/MarchApril2025Newsletter.html">
         <img loading="lazy" src="issues/April2025/CleElumNetting.JPG" alt="Mar - Apr 2025">
         <span>Mar - Apr 2025</span>
       </a>
-      <a class="issue-card" href="issues/DecJan2025/DecJan2025Newsletter.html">
-        <img loading="lazy" src="issues/DecJan2025/Steelhead_DEC.png" alt="Dec - Jan 2025">
-        <span>Dec - Jan 2025</span>
+      <a class="issue-card" href="issues/May2025/May2025Newsletter.html">
+        <img loading="lazy" src="issues/May2025/eDNA.jpg" alt="May 2025">
+        <span>May 2025</span>
+      </a>
+      <a class="issue-card" href="issues/June2025/June2025Newsletter.html">
+        <img loading="lazy" src="issues/June2025/Gold-Creek-Pond.jpg" alt="June 2025">
+        <span>June 2025</span>
+      </a>
+      <a class="issue-card" href="issues/August2025/JulyAugust2025Newsletter.html">
+        <img loading="lazy" src="issues/August2025/Clear-Creek.jpg" alt="Jul - Aug 2025">
+        <span>Jul - Aug 2025</span>
+      </a>
+      <a class="issue-card" href="issues/October2025/SeptemberOctober2025Newsletter.html">
+        <img loading="lazy" src="issues/October2025/Keechelus-Picket-Weir.JPG" alt="Sep - Oct 2025">
+        <span>Sep - Oct 2025</span>
       </a>
     </div>
   </main>
@@ -174,11 +185,14 @@
         });
       }
       submenuToggles.forEach(function(toggle){
-        const submenu = toggle.nextElementSibling;
         toggle.addEventListener('click', function(){
+          const parentItem = toggle.closest('.has-submenu');
+          const submenu = parentItem ? parentItem.querySelector('.submenu') : null;
           const expanded = toggle.getAttribute('aria-expanded') === 'true';
           toggle.setAttribute('aria-expanded', String(!expanded));
-          submenu.classList.toggle('show', !expanded);
+          if(submenu){
+            submenu.classList.toggle('show', !expanded);
+          }
         });
       });
       document.querySelectorAll('.nav-links a').forEach(function(link){
@@ -186,8 +200,11 @@
           navLinks.classList.remove('show');
           submenuToggles.forEach(function(toggle){
             toggle.setAttribute('aria-expanded', 'false');
-            const submenu = toggle.nextElementSibling;
-            submenu.classList.remove('show');
+            const parentItem = toggle.closest('.has-submenu');
+            const submenu = parentItem ? parentItem.querySelector('.submenu') : null;
+            if(submenu){
+              submenu.classList.remove('show');
+            }
           });
         });
       });
