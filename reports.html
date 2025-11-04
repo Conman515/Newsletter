@@ -4,9 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Reports</title>
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
   <style>
     :root{
+      --primary:#4c7eb0;
+      --secondary:#FFFFFF;
+      --accent1:#e09f1f;
+      --accent2:#FFFFFF;
+      --neutral-light:#d9f3ff;
+      --font-heading:'Playfair Display',serif;
+      --font-body:'Source Sans 3',sans-serif;
+    }
+      body{margin:0;font-family:var(--font-body);background:#a0acbd;color:#000;display:flex;flex-direction:column;min-height:100vh;opacity:0;transition:opacity 0.5s ease-in-out;}
+      html{background:#a0acbd;}
+    body.fade-in{opacity:1;}
+    body.fade-out{opacity:0;}
+    header{background:linear-gradient(90deg, var(--primary), var(--accent1));color:#d9f3ff;display:flex;align-items:center;justify-content:space-between;padding:0.5em 1em;box-shadow:0 2px 4px rgba(0,0,0,0.15);}
+    header .logo{display:flex;align-items:center;font-weight:700;font-size:1.4rem;font-family:var(--font-heading);letter-spacing:-0.02em;}
       --bg-gradient: linear-gradient(180deg,#f7f9fc,#eef2f7);
       --navy-900:#1f2c3d;
       --navy-700:#2c3e55;
@@ -31,6 +45,11 @@
     nav{position:relative;}
     .nav-links{list-style:none;display:flex;margin:0;padding:0;align-items:center;gap:0.25rem;}
     .nav-links li{position:relative;}
+    .nav-links>li>a,.submenu-header>a{display:block;padding:0.5em 1em;color:#d9f3ff;text-decoration:none;background:none;border:none;text-align:left;transition:background 0.3s,color 0.3s;font-family:var(--font-body);text-transform:uppercase;letter-spacing:0.08em;font-weight:600;}
+    .nav-links>li>a:focus,.nav-links>li>a:hover,.submenu-header>a:focus,.submenu-header>a:hover,.submenu-toggle:focus,.submenu-toggle:hover{background:rgba(255,255,255,0.1);color:var(--accent2);}
+    .submenu-header{display:flex;align-items:center;}
+    .submenu-header>a{flex:1;}
+    .submenu-toggle{display:flex;align-items:center;justify-content:center;background:none;border:none;color:#d9f3ff;padding:0.5em 0.75em;cursor:pointer;transition:background 0.3s,color 0.3s;font-family:var(--font-body);text-transform:uppercase;letter-spacing:0.08em;font-weight:600;}
     .nav-links>li>a,.submenu-header>a{display:block;padding:0.6em 1.1em;border-radius:999px;color:rgba(255,255,255,0.92);text-decoration:none;transition:color 0.3s ease,background 0.3s ease,box-shadow 0.3s ease;}
     .nav-links>li>a:hover,.nav-links>li>a:focus-visible,.submenu-header>a:hover,.submenu-header>a:focus-visible,.submenu-toggle:hover,.submenu-toggle:focus-visible{color:var(--copper-200);background:rgba(255,255,255,0.12);outline:none;box-shadow:0 8px 18px rgba(219,166,118,0.25);}
     .submenu-header{display:flex;align-items:center;}
@@ -56,6 +75,18 @@
       .submenu-toggle{margin-left:auto;}
       .hamburger{display:flex;margin-top:0.5rem;}
     }
+      .content{flex:1;text-align:center;padding:2em;}
+    a{color:#4c7eb0;}
+    .content h1{font-family:var(--font-heading);font-size:2.6rem;letter-spacing:-0.015em;}
+    .content p{font-family:var(--font-body);font-size:1.125rem;line-height:1.7;max-width:60ch;margin:0.75em auto 0;}
+    .report-grid{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;margin-top:2em;}
+    .report-card{background:var(--neutral-light);color:var(--primary);text-decoration:none;border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,0.2);transition:transform 0.3s ease, box-shadow 0.3s ease;width:220px;padding:1em;display:flex;flex-direction:column;align-items:center;}
+    .report-card img{width:100%;height:120px;object-fit:cover;border-radius:4px;}
+    .report-card span{margin-top:0.5em;font-weight:500;font-size:1.4rem;line-height:1.4;font-family:var(--font-heading);letter-spacing:-0.01em;}
+    .report-card:hover{transform:translateY(-5px);box-shadow:0 4px 12px var(--accent1);}
+    @media(max-width:600px){.report-card{flex-basis:100%;width:100%;}.report-card span{font-size:1.2rem;}.content h1{font-size:2.1rem;}.content p{font-size:1rem;}}
+    footer{background:#4c7eb0;color:#d9f3ff;text-align:center;padding:0.5em 0;}
+    footer a{color:orange;}
     main{flex:1;background:var(--surface);border-radius:28px;box-shadow:var(--shadow-soft);padding:clamp(2.75rem,5vw,3.75rem) clamp(1.5rem,4vw,3.75rem);text-align:center;display:flex;flex-direction:column;gap:2.5rem;}
     main h1{margin:0;font-size:clamp(2.4rem,4vw,3rem);color:var(--navy-900);}
     .report-grid{display:flex;flex-wrap:wrap;gap:24px;justify-content:center;}

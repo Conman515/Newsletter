@@ -4,8 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>The Leaky Wader</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --font-heading: 'Playfair Display', serif;
+      --font-body: 'Source Sans 3', sans-serif;
     :root{
       --bg-gradient: linear-gradient(180deg,#f7f9fc,#eef2f7);
       --navy-900:#1f2c3d;
@@ -24,6 +27,8 @@
     }
     html{background:var(--bg-gradient);}
     body {
+      font-family: var(--font-body);
+      background: #a0acbd;
       font-family: 'Playfair Display', serif;
       background: var(--bg-gradient);
       color: var(--surface);
@@ -106,6 +111,8 @@
           font-size: clamp(4rem, 10vw, 15rem);
           margin: 0;
           line-height: 1.1;
+          font-family: var(--font-heading);
+          letter-spacing: -0.02em;
           text-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
         }
       .title span {
@@ -159,6 +166,7 @@
         letter-spacing: 0.04em;
         text-transform: uppercase;
         transition: background 0.3s, transform 0.3s;
+        font-family: var(--font-body);
         text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
       }
       .cta:hover {
@@ -179,6 +187,7 @@
       }
       .hero__content{gap:1.25rem;}
       .title {
+        font-size: 2.25rem;
         font-size: 2.5rem;
         text-shadow: 0 5px 14px rgba(0, 0, 0, 0.35);
       }
