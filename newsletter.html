@@ -17,6 +17,16 @@
       --accent2:#FFFFFF;
       --neutral-light:#d9f3ff;
       --highlight:#000000;
+      --space-1:0.25rem;
+      --space-2:0.5rem;
+      --space-3:0.75rem;
+      --space-4:1rem;
+      --space-5:1.25rem;
+      --space-6:1.75rem;
+      --radius-lg:18px;
+      --shadow-soft:0 18px 40px -22px rgba(31,53,76,0.4);
+      --shadow-hover:0 26px 44px -18px rgba(26,45,70,0.55);
+      --gradient-border:linear-gradient(135deg, rgba(76,126,176,0.85), rgba(224,159,31,0.9));
       --font-heading:'Playfair Display',serif;
       --font-body:'Source Sans 3',sans-serif;
     }
@@ -169,6 +179,7 @@
       color:rgba(255,255,255,0.85);
       text-shadow:0 6px 16px rgba(0,0,0,0.4);
     }
+    .issue-grid{display:flex;flex-wrap:wrap;gap:var(--space-5);justify-content:center;margin-top:2em;}
     .hero__cta{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;}
     .btn{
       display:inline-flex;
@@ -192,21 +203,66 @@
     .section-intro p{font-size:1.2rem;line-height:1.7;margin:0;color:#1f2a38;}
     .issue-grid{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;}
     .issue-card{
-      background:var(--neutral-light);
+      background:linear-gradient(#ffffff,#ffffff) padding-box,var(--gradient-border) border-box;
       color:var(--primary);
       text-decoration:none;
-      border-radius:8px;
+      border-radius:var(--radius-lg);
       overflow:hidden;
-      box-shadow:0 2px 6px rgba(0,0,0,0.2);
-      transition:transform 0.3s ease, box-shadow 0.3s ease;
-      width:220px;
-      padding:1em;
+      box-shadow:var(--shadow-soft);
+      transition:transform 0.35s ease, box-shadow 0.35s ease;
+      width:240px;
+      max-width:100%;
+      padding:var(--space-5);
+      border:1px solid transparent;
       display:flex;
       flex-direction:column;
-      align-items:center;
+      gap:var(--space-4);
+      align-items:flex-start;
+      text-align:left;
+      position:relative;
+      isolation:isolate;
+      transform:translateY(0);
     }
-    .issue-card img{width:100%;height:120px;object-fit:cover;border-radius:4px;}
+    .issue-card::before{
+      content:attr(data-label);
+      font-variant:small-caps;
+      letter-spacing:0.22em;
+      font-size:0.75rem;
+      color:rgba(76,126,176,0.75);
+      display:block;
+      margin-bottom:var(--space-2);
+    }
+    .issue-card img{width:100%;height:140px;object-fit:cover;border-radius:12px;transition:transform 0.45s ease;box-shadow:0 10px 30px -20px rgba(15,30,45,0.35);}
     .issue-card span{
+      margin:0;
+      font-weight:600;
+      font-size:1.45rem;
+      line-height:1.35;
+      position:relative;
+      padding-bottom:var(--space-2);
+      display:inline-block;
+    }
+    .issue-card span::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:0;
+      width:100%;
+      height:3px;
+      background:linear-gradient(90deg,var(--accent1),var(--primary));
+      transform:scaleX(0);
+      transform-origin:left;
+      transition:transform 0.35s ease;
+      opacity:0.85;
+    }
+    .issue-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-hover);}
+    .issue-card:hover img{transform:scale(1.05);}
+    .issue-card:hover span::after{transform:scaleX(1);}
+    @media(max-width:600px){
+      .issue-card{flex-basis:100%;width:100%;padding:var(--space-6);}
+      .issue-card span{font-size:1.35rem;}
+      .hero h1{font-size:45px;}
+      .hero p{font-size:24px;}
       margin-top:0.5em;
       font-weight:500;
       font-size:1.6rem;
@@ -279,27 +335,27 @@
       <p>Select a month below to explore each issue.</p>
     </section>
     <div class="issue-grid">
-      <a class="issue-card" href="issues/DecJan2025/DecJan2025Newsletter.html">
+      <a class="issue-card" href="issues/DecJan2025/DecJan2025Newsletter.html" data-label="Issue">
         <img loading="lazy" src="issues/DecJan2025/Steelhead_DEC.png" alt="Dec - Jan 2025">
         <span>Dec - Jan 2025</span>
       </a>
-      <a class="issue-card" href="issues/April2025/MarchApril2025Newsletter.html">
+      <a class="issue-card" href="issues/April2025/MarchApril2025Newsletter.html" data-label="Issue">
         <img loading="lazy" src="issues/April2025/CleElumNetting.JPG" alt="Mar - Apr 2025">
         <span>Mar - Apr 2025</span>
       </a>
-      <a class="issue-card" href="issues/May2025/May2025Newsletter.html">
+      <a class="issue-card" href="issues/May2025/May2025Newsletter.html" data-label="Issue">
         <img loading="lazy" src="issues/May2025/eDNA.jpg" alt="May 2025">
         <span>May 2025</span>
       </a>
-      <a class="issue-card" href="issues/June2025/June2025Newsletter.html">
+      <a class="issue-card" href="issues/June2025/June2025Newsletter.html" data-label="Issue">
         <img loading="lazy" src="issues/June2025/Gold-Creek-Pond.jpg" alt="June 2025">
         <span>June 2025</span>
       </a>
-      <a class="issue-card" href="issues/August2025/JulyAugust2025Newsletter.html">
+      <a class="issue-card" href="issues/August2025/JulyAugust2025Newsletter.html" data-label="Issue">
         <img loading="lazy" src="issues/August2025/Clear-Creek.jpg" alt="Jul - Aug 2025">
         <span>Jul - Aug 2025</span>
       </a>
-      <a class="issue-card" href="issues/October2025/SeptemberOctober2025Newsletter.html">
+      <a class="issue-card" href="issues/October2025/SeptemberOctober2025Newsletter.html" data-label="Issue">
         <img loading="lazy" src="issues/October2025/Keechelus-Picket-Weir.JPG" alt="Sep - Oct 2025">
         <span>Sep - Oct 2025</span>
       </a>
