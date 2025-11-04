@@ -4,14 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>The Leaky Wader</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --font-heading: 'Playfair Display', serif;
+      --font-body: 'Source Sans 3', sans-serif;
+    }
     html, body {
       height: 100%;
       margin: 0;
     }
     body {
-      font-family: 'Playfair Display', serif;
+      font-family: var(--font-body);
       background: #a0acbd;
       display: flex;
       flex-direction: column;
@@ -39,6 +43,8 @@
           font-size: clamp(4rem, 10vw, 15rem);
           margin: 0;
           line-height: 1.1;
+          font-family: var(--font-heading);
+          letter-spacing: -0.02em;
         }
       .title span {
         display: block;
@@ -77,6 +83,7 @@
         font-size: 1.25rem;
         border-radius: 4px;
         transition: background 0.3s, transform 0.3s;
+        font-family: var(--font-body);
       }
       .cta:hover {
         background: #e09f1f;
@@ -85,7 +92,7 @@
     @media (max-width: 600px) {
       .hero{padding:1.5rem;}
       .title {
-        font-size: 2.5rem;
+        font-size: 2.25rem;
       }
       .cta {
         font-size: 1rem;

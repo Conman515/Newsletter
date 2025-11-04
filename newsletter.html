@@ -8,7 +8,7 @@
   <meta property="og:description" content="U.S. Fish &amp; Wildlife Service Yakima Newsletter">
   <meta property="og:image" content="assets/logo/usfws-logo.webp">
   <meta property="og:type" content="website">
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
   <style>
     :root{
       --primary:#4c7eb0;
@@ -17,8 +17,10 @@
       --accent2:#FFFFFF;
       --neutral-light:#d9f3ff;
       --highlight:#000000;
+      --font-heading:'Playfair Display',serif;
+      --font-body:'Source Sans 3',sans-serif;
     }
-    body{margin:0;font-family:'Newsreader',serif;background:#a0acbd;color:#000;display:flex;flex-direction:column;min-height:100vh;opacity:0;transition:opacity 0.5s ease-in-out;}
+    body{margin:0;font-family:var(--font-body);background:#a0acbd;color:#000;display:flex;flex-direction:column;min-height:100vh;opacity:0;transition:opacity 0.5s ease-in-out;}
     html{background:#a0acbd;}
     body.fade-in{opacity:1;}
     body.fade-out{opacity:0;}
@@ -32,15 +34,15 @@
       box-shadow:0 2px 4px rgba(0,0,0,0.15);
     }
     nav{background:none;position:relative;}
-    header .logo{display:flex;align-items:center;font-weight:700;font-size:1.75rem;}
+    header .logo{display:flex;align-items:center;font-weight:700;font-size:1.75rem;font-family:var(--font-heading);letter-spacing:-0.02em;}
     header .logo img{height:40px;margin-right:0.5em;}
     .nav-links{list-style:none;display:flex;margin:0;padding:0;align-items:center;}
     .nav-links li{position:relative;}
-    .nav-links>li>a,.submenu-header>a{display:block;padding:0.5em 1em;color:var(--neutral-light);text-decoration:none;background:none;border:none;text-align:left;transition:background 0.3s,color 0.3s;}
+    .nav-links>li>a,.submenu-header>a{display:block;padding:0.5em 1em;color:var(--neutral-light);text-decoration:none;background:none;border:none;text-align:left;transition:background 0.3s,color 0.3s;font-family:var(--font-body);text-transform:uppercase;letter-spacing:0.08em;font-weight:600;}
     .nav-links>li>a:focus,.nav-links>li>a:hover,.submenu-header>a:focus,.submenu-header>a:hover,.submenu-toggle:focus,.submenu-toggle:hover{background:rgba(255,255,255,0.1);color:var(--accent2);}
     .submenu-header{display:flex;align-items:center;}
     .submenu-header>a{flex:1;}
-    .submenu-toggle{display:flex;align-items:center;justify-content:center;background:none;border:none;color:var(--neutral-light);padding:0.5em 0.75em;cursor:pointer;transition:background 0.3s,color 0.3s;}
+    .submenu-toggle{display:flex;align-items:center;justify-content:center;background:none;border:none;color:var(--neutral-light);padding:0.5em 0.75em;cursor:pointer;transition:background 0.3s,color 0.3s;font-family:var(--font-body);text-transform:uppercase;letter-spacing:0.08em;font-weight:600;}
     .submenu-toggle .chevron{font-size:0.75rem;transition:transform 0.3s ease;}
     .submenu-toggle[aria-expanded="true"] .chevron{transform:rotate(180deg);}
     .hamburger{display:none;flex-direction:column;cursor:pointer;}
@@ -67,17 +69,19 @@
       color:#000;
     }
     .hero h1{
-      font-family:Helvetica,Arial,sans-serif;
+      font-family:var(--font-heading);
       margin-bottom:0.5em;
-      font-size:60px;
+      font-size:3.75rem;
       line-height:1.2;
       font-weight:700;
+      letter-spacing:-0.02em;
     }
     .hero p{
       margin-bottom:2em;
-      font-size:27px;
+      font-size:1.35rem;
       line-height:1.6;
       font-weight:400;
+      font-family:var(--font-body);
     }
     .issue-grid{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;margin-top:2em;}
     .issue-card{
@@ -98,15 +102,17 @@
     .issue-card span{
       margin-top:0.5em;
       font-weight:500;
-      font-size:1.75rem;
+      font-size:1.6rem;
       line-height:1.4;
+      font-family:var(--font-heading);
+      letter-spacing:-0.01em;
     }
     .issue-card:hover{transform:translateY(-5px);box-shadow:0 4px 12px var(--accent1);}
     @media(max-width:600px){
       .issue-card{flex-basis:100%;width:100%;}
-      .issue-card span{font-size:1.5em;}
-      .hero h1{font-size:45px;}
-      .hero p{font-size:24px;}
+      .issue-card span{font-size:1.35rem;}
+      .hero h1{font-size:2.25rem;}
+      .hero p{font-size:1rem;}
     }
     footer{background:#4c7eb0;color:#d9f3ff;text-align:center;padding:0.5em 0;}
     footer a{color:orange;}
