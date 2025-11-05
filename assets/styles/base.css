@@ -21,6 +21,7 @@
 html {
   height: 100%;
   background: var(--bg-gradient);
+  scroll-behavior: smooth;
 }
 
 body {
@@ -37,7 +38,8 @@ body {
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 body.fade-in {
