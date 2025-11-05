@@ -2,7 +2,13 @@ document.addEventListener('DOMContentLoaded', () => {
   document.body.classList.add('fade-in');
   document.querySelectorAll('a').forEach(link => {
     const href = link.getAttribute('href');
-    if (!href || href.startsWith('#') || link.target === '_blank') return;
+    const shouldBypass =
+      !href ||
+      href.startsWith('#') ||
+      link.target === '_blank' ||
+      link.hasAttribute('download');
+
+    if (shouldBypass) return;
     link.addEventListener('click', e => {
       e.preventDefault();
       document.body.classList.remove('fade-in');
