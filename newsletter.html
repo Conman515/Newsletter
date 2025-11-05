@@ -15,6 +15,19 @@
       gap: clamp(2rem, 4vw, 3rem);
     }
 
+    body.newsletter-page main {
+      background: transparent;
+      box-shadow: none;
+      padding: 0;
+      gap: clamp(2.5rem, 5vw, 4rem);
+      overflow: visible;
+      border-radius: 0;
+    }
+
+    body.newsletter-page main > * {
+      margin: 0;
+    }
+
     .hero {
       position: relative;
       min-height: 50vh;
@@ -23,11 +36,11 @@
       justify-content: center;
       padding: clamp(3rem, 6vw, 5rem) clamp(1.5rem, 4vw, 3rem);
       text-align: center;
-      border-radius: 24px;
+      border-radius: clamp(28px, 5vw, 40px);
       overflow: hidden;
       color: #fff;
       background: url('issues/October2025/Keechelus-Picket-Weir.JPG') center / cover no-repeat;
-      box-shadow: var(--shadow-elevated);
+      box-shadow: 0 40px 70px rgba(10, 23, 46, 0.35);
       isolation: isolate;
     }
 
@@ -107,10 +120,33 @@
     }
 
     .page-section {
+      position: relative;
       display: flex;
       flex-direction: column;
       gap: 2rem;
       text-align: center;
+      background: linear-gradient(155deg, rgba(255, 255, 255, 0.96), rgba(236, 246, 252, 0.9));
+      padding: clamp(2.75rem, 5vw, 3.75rem) clamp(2.25rem, 5vw, 3.5rem);
+      border-radius: clamp(24px, 4vw, 32px);
+      box-shadow: 0 32px 60px rgba(31, 44, 61, 0.16);
+      border: 1px solid rgba(60, 80, 105, 0.08);
+      overflow: visible;
+    }
+
+    .page-section::before {
+      content: "";
+      position: absolute;
+      inset: -20% -10% 0 -10%;
+      background: radial-gradient(circle at 10% 10%, rgba(58, 167, 163, 0.2), transparent 55%),
+        radial-gradient(circle at 90% 20%, rgba(195, 122, 71, 0.18), transparent 60%);
+      opacity: 0.6;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .page-section > * {
+      position: relative;
+      z-index: 1;
     }
 
     .section-intro {
@@ -219,10 +255,14 @@
         width: 100%;
         max-width: 320px;
       }
+
+      .page-section {
+        padding: 2.25rem 1.5rem;
+      }
     }
   </style>
 </head>
-<body>
+<body class="newsletter-page">
   <div class="page-shell">
     <header>
       <div class="logo">
