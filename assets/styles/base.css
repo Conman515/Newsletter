@@ -89,7 +89,7 @@ body::after {
 
 header {
   background: linear-gradient(135deg, rgba(247, 255, 252, 0.92), rgba(191, 226, 223, 0.94) 45%, rgba(242, 206, 164, 0.95));
-  color: var(--surface);
+  color: var(--navy-900);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -111,6 +111,7 @@ header .logo {
   font-size: 1.5rem;
   letter-spacing: 0.02em;
   font-family: var(--font-heading);
+  color: var(--navy-900);
 }
 
 nav {
@@ -135,13 +136,13 @@ nav {
   display: block;
   padding: 0.65em 1.2em;
   border-radius: 999px;
-  color: rgba(255, 255, 255, 0.94);
+  color: var(--navy-900);
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   font-weight: 600;
   transition: color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.85);
 }
 
 .nav-links > li > a:hover,
@@ -150,10 +151,10 @@ nav {
 .submenu-header > a:focus-visible,
 .submenu-toggle:hover,
 .submenu-toggle:focus-visible {
-  color: #fff;
-  background: linear-gradient(135deg, rgba(219, 166, 118, 0.45), rgba(58, 167, 163, 0.5));
+  color: var(--navy-900);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(235, 245, 249, 0.95));
   outline: none;
-  box-shadow: 0 12px 22px rgba(31, 44, 61, 0.3);
+  box-shadow: 0 12px 22px rgba(31, 44, 61, 0.18);
 }
 
 .submenu-header {
@@ -169,9 +170,9 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: transparent;
+  background: rgba(255, 255, 255, 0.6);
   border: none;
-  color: rgba(255, 255, 255, 0.92);
+  color: var(--navy-900);
   padding: 0.6em 0.75em;
   margin-left: 0.25rem;
   border-radius: 999px;
@@ -199,21 +200,21 @@ nav {
   height: 3px;
   width: 26px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.92);
+  background: var(--navy-900);
 }
 
 .submenu {
   position: absolute;
   left: 0;
   top: 100%;
-  background: linear-gradient(160deg, rgba(76, 126, 176, 0.92), rgba(58, 167, 163, 0.9));
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.98), rgba(235, 245, 249, 0.95));
   list-style: none;
   padding: 0.5em;
   margin: 0;
   min-width: 230px;
   border-radius: 18px;
-  border: 1px solid rgba(195, 122, 71, 0.35);
-  box-shadow: 0 18px 32px rgba(58, 78, 105, 0.24);
+  border: 1px solid rgba(195, 122, 71, 0.25);
+  box-shadow: 0 18px 32px rgba(58, 78, 105, 0.18);
   display: none;
   backdrop-filter: blur(6px);
   z-index: 20;
@@ -223,7 +224,7 @@ nav {
   display: block;
   padding: 0.55em 1.1em;
   border-radius: 12px;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--navy-700);
   text-decoration: none;
   font-size: 0.95rem;
   transition: background 0.3s ease, color 0.3s ease;
@@ -231,8 +232,8 @@ nav {
 
 .submenu li a:hover,
 .submenu li a:focus-visible {
-  background: rgba(195, 122, 71, 0.22);
-  color: #fff;
+  background: rgba(58, 167, 163, 0.16);
+  color: var(--navy-900);
   outline: none;
 }
 
@@ -295,6 +296,7 @@ nav {
 
   .submenu-toggle {
     margin-left: auto;
+    color: var(--navy-900);
   }
 
   .hamburger {
