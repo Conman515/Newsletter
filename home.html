@@ -15,7 +15,7 @@
     main::before {
       content: "";
       position: absolute;
-      inset: -40% -35% 10% -35%;
+      inset: -35% -30% -35% -30%;
       background: radial-gradient(circle at 50% 20%, rgba(58, 167, 163, 0.18), transparent 55%),
         radial-gradient(circle at 10% 90%, rgba(219, 166, 118, 0.16), transparent 60%);
       z-index: 0;
@@ -30,8 +30,10 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: clamp(1.5rem, 3vw, 2.5rem);
-      margin-top: 1rem;
+      margin: clamp(1.5rem, 3vw, 2.5rem) auto;
+      padding: clamp(1.5rem, 4vw, 2.75rem) clamp(1.25rem, 4vw, 2.5rem);
       align-items: stretch;
+      max-width: min(100%, 860px);
     }
 
     .card {
@@ -105,7 +107,8 @@
 
     @media (max-width: 700px) {
       .card-container {
-        margin-top: 0.5rem;
+        margin: clamp(1rem, 5vw, 1.75rem) auto;
+        padding: clamp(1.25rem, 5vw, 2rem) clamp(1rem, 6vw, 1.75rem);
       }
     }
   </style>
