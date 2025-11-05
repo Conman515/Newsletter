@@ -88,7 +88,7 @@ body::after {
 }
 
 header {
-  background: linear-gradient(135deg, rgba(247, 255, 252, 0.92), rgba(191, 226, 223, 0.94) 45%, rgba(242, 206, 164, 0.95));
+  background: linear-gradient(130deg, rgba(214, 231, 236, 0.97) 0%, rgba(191, 226, 223, 0.96) 48%, rgba(242, 206, 164, 0.96) 100%);
   color: var(--navy-900);
   display: flex;
   align-items: center;
@@ -107,11 +107,12 @@ header .logo {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-weight: 700;
+  font-weight: 800;
   font-size: 1.5rem;
   letter-spacing: 0.02em;
   font-family: var(--font-heading);
-  color: var(--navy-900);
+  color: #17263a;
+  text-shadow: 0 6px 18px rgba(23, 38, 58, 0.28);
 }
 
 nav {
