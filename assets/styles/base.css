@@ -183,6 +183,12 @@ nav {
   transition: color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
 }
 
+.nav-links > li > a.nav-active {
+  background: linear-gradient(135deg, rgba(58, 167, 163, 0.22), rgba(235, 245, 249, 0.95));
+  box-shadow: 0 8px 18px rgba(31, 44, 61, 0.14);
+  color: var(--navy-900);
+}
+
 .submenu-toggle .chevron {
   font-size: 0.75rem;
   transition: transform 0.3s ease;

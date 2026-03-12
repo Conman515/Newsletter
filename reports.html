@@ -12,11 +12,37 @@
       gap: 2.5rem;
     }
 
-    main h1 {
+    .reports-intro {
+      max-width: 600px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .reports-intro h1 {
       margin: 0;
       font-size: clamp(2.4rem, 4vw, 3rem);
       font-family: var(--font-heading);
       color: var(--navy-900);
+    }
+
+    .reports-intro p {
+      margin: 0;
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    .download-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3em;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--copper-600);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
     }
 
     .report-grid {
@@ -84,7 +110,7 @@
           <li><a href="home.html">Home</a></li>
           <li class="has-submenu">
             <div class="submenu-header">
-              <a href="newsletter.html">Newsletter</a>
+              <a href="newsletter.html" class="">Newsletter</a>
               <button class="submenu-toggle" aria-expanded="false" aria-label="Toggle Newsletter submenu">
                 <span class="chevron" aria-hidden="true">&#9662;</span>
               </button>
@@ -98,16 +124,20 @@
               <li><a href="issues/October2025/SeptemberOctober2025Newsletter.html">Sep &ndash; Oct 2025</a></li>
             </ul>
           </li>
-          <li><a href="reports.html">Reports</a></li>
+          <li><a href="reports.html" class="nav-active">Reports</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <h1>Reports</h1>
+      <div class="reports-intro">
+        <h1>Reports</h1>
+        <p>Annual project reports, data summaries, and detailed findings from the Yakima Basin program.</p>
+      </div>
       <div class="report-grid">
         <a class="report-card" href="assets/reports/yakima-basin-bull-trout-transport-project-2024.docx" data-label="Report" download>
           <img loading="lazy" src="assets/reports/2024-th.png" alt="2024 Transport &amp; Hauling Report">
           <span>Bull Trout Transport Project 2024</span>
+          <span class="download-label">&#8595; Download</span>
         </a>
       </div>
     </main>
