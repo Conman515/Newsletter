@@ -169,10 +169,9 @@
     }
 
     .issue-grid {
-      display: flex;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 24px;
-      justify-content: center;
     }
 
     .issue-card {
@@ -184,12 +183,27 @@
       box-shadow: 0 14px 30px rgba(31, 44, 61, 0.12);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       border: 1px solid rgba(60, 80, 105, 0.08);
-      width: 230px;
       padding: 1.25em;
       display: flex;
       flex-direction: column;
       gap: 0.85rem;
       align-items: center;
+      position: relative;
+    }
+
+    .issue-card .badge {
+      position: absolute;
+      top: 1.05em;
+      right: 1.05em;
+      background: var(--copper-500);
+      color: #fff;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      padding: 0.25em 0.7em;
+      border-radius: 999px;
+      box-shadow: 0 4px 10px rgba(195, 122, 71, 0.35);
     }
 
     .issue-card img {
@@ -248,9 +262,8 @@
         font-size: 1rem;
       }
 
-      .issue-card {
-        width: 100%;
-        max-width: 320px;
+      .issue-grid {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
       }
 
       .page-section {
@@ -273,7 +286,7 @@
           <li><a href="home.html">Home</a></li>
           <li class="has-submenu">
             <div class="submenu-header">
-              <a href="newsletter.html">Newsletter</a>
+              <a href="newsletter.html" class="nav-active">Newsletter</a>
               <button class="submenu-toggle" aria-expanded="false" aria-label="Toggle Newsletter submenu">
                 <span class="chevron" aria-hidden="true">&#9662;</span>
               </button>
@@ -329,6 +342,7 @@
             <span>Jul - Aug 2025</span>
           </a>
           <a class="issue-card" href="issues/October2025/SeptemberOctober2025Newsletter.html">
+            <span class="badge">Latest</span>
             <img loading="lazy" src="issues/October2025/Keechelus-Picket-Weir.JPG" alt="Sep - Oct 2025">
             <span>Sep - Oct 2025</span>
           </a>
